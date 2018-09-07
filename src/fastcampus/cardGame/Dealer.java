@@ -37,5 +37,27 @@ public class Dealer {
     }
 
 
-    //결과를 말한다
+    //카드 5장의 합을 계산한다.
+    public int sumNumber(List<Card> c){
+        int sum = 0;
+        for(int i=0; i<c.size(); i++) {
+            sum += c.get(i).getNumber();
+        }
+
+        return sum;
+    }
+
+    //승자를 판독한다.
+
+    public void sayWinner(List<Player> playerList){
+        Player winner = new Player();
+        for(int i=0; i<playerList.size(); i++) {
+            if(playerList.get(i).getTotalNum() > winner.getTotalNum()){
+                winner =playerList.get(i);
+            }
+
+        }
+
+        System.out.println("승자는 " + winner.getName());
+    }
 }

@@ -30,7 +30,7 @@ public class CardGame {
         }
 
         for(Player p : playerList){
-            System.out.print(p.getName() +":");
+            System.out.print(p.getName() +" : ");
             for(int i=0; i<5; i++) {
                 System.out.print(p.getCardList().get(i).getNumber() + " " + p.getCardList().get(i).getType() + "/");
             }
@@ -38,5 +38,13 @@ public class CardGame {
         }
 
         //딜러가 플레이어 들의 카드 숫자의 합계를 받는다
+        for(Player p : playerList){
+            p.setTotalNum(d.sumNumber(p.getCardList()));
+            System.out.println(p.getName() + " : "+p.getTotalNum());
+        };
+
+        //승자를 판독하고 승자를 말한다.
+        d.sayWinner(playerList);
+
     }
 }

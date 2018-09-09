@@ -1,0 +1,26 @@
+package javaJungsuk.chap15;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileCopy {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fis = new FileInputStream(args[0]);
+            //FileOutputStream fos = new FileOutputStream(args[1]);
+
+            String cFileName = "C:\\Users\\siyoon\\Documents\\GitHub\\Java-Practice\\src\\javaJungsuk\\chap15\\FileCopy.bak";
+            FileOutputStream fos = new FileOutputStream(cFileName);
+
+            int data =0;
+            while((data=fis.read())!=-1){
+                fos.write(data);
+            }
+            fis.close();
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac613564-a506-432e-ab11-8852ef534e4f" name="Default Changelist" comment="클래스 만듬">
-      <change afterPath="$PROJECT_DIR$/src/javaJungsuk/chap11/TreeSetLotto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/javaJungsuk/chap11/exercise11_6/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx5.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -38,26 +41,26 @@
         <counts>
           <entry key="bak" value="1" />
           <entry key="dat" value="2" />
-          <entry key="java" value="52" />
+          <entry key="java" value="57" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="52" />
+          <entry key="JAVA" value="57" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="java" value="10548" />
+          <entry key="java" value="11675" />
           <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10548" />
+          <entry key="JAVA" value="11675" />
           <entry key="PLAIN_TEXT" value="15" />
         </counts>
       </usages-collector>
@@ -77,14 +80,63 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap11/TreeSetLotto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+            <state relative-caret-position="228">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+              <folding>
+                <element signature="e#241#242#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx4.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -159,6 +211,11 @@
         <option value="$PROJECT_DIR$/src/javaJungsuk/chap11/exercise11_6/Exercise11_6.java" />
         <option value="$PROJECT_DIR$/src/javaJungsuk/chap11/exercise11_6/TreeSetLotto.java" />
         <option value="$PROJECT_DIR$/src/javaJungsuk/chap11/TreeSetLotto.java" />
+        <option value="$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx1.java" />
+        <option value="$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx2.java" />
+        <option value="$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx3.java" />
+        <option value="$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx4.java" />
+        <option value="$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx5.java" />
       </list>
     </option>
   </component>
@@ -168,7 +225,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="691" />
     <option name="y" value="7" />
     <option name="width" value="1944" />
@@ -205,7 +262,7 @@
               <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="javaJungsuk" type="462c0819:PsiDirectoryNode" />
-              <item name="chap11" type="462c0819:PsiDirectoryNode" />
+              <item name="chap13" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,13 +277,17 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/siyoon/Documents/GitHub/Java-Practice/src/fastcampus/Collections/sort/Book.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536565115112" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536567974135" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="javaJungsuk.chap13" />
       <recent name="javaJungsuk.chap15" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\siyoon\Documents\GitHub\Java-Practice\src\javaJungsuk\chap13" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -241,13 +302,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TreeSetLotto">
-    <configuration name="BufferedReaderEx1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaJungsuk.chap15.BufferedReaderEx1" />
+  <component name="RunManager" selected="Application.ThreadEx5">
+    <configuration name="ThreadEx1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaJungsuk.chap13.ThreadEx1" />
       <module name="Java-Practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="javaJungsuk.chap15.*" />
+          <option name="PATTERN" value="javaJungsuk.chap13.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -255,12 +316,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputStreamReaderEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaJungsuk.chap15.InputStreamReaderEx" />
+    <configuration name="ThreadEx2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaJungsuk.chap13.ThreadEx2" />
       <module name="Java-Practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="javaJungsuk.chap15.*" />
+          <option name="PATTERN" value="javaJungsuk.chap13.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -268,12 +329,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StandardIOEx1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaJungsuk.chap15.StandardIOEx1" />
+    <configuration name="ThreadEx3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaJungsuk.chap13.ThreadEx3" />
       <module name="Java-Practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="javaJungsuk.chap15.*" />
+          <option name="PATTERN" value="javaJungsuk.chap13.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -281,12 +342,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringReaderWriterEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaJungsuk.chap15.StringReaderWriterEx" />
+    <configuration name="ThreadEx4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaJungsuk.chap13.ThreadEx4" />
       <module name="Java-Practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="javaJungsuk.chap15.*" />
+          <option name="PATTERN" value="javaJungsuk.chap13.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -294,12 +355,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeSetLotto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaJungsuk.chap11.TreeSetLotto" />
+    <configuration name="ThreadEx5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaJungsuk.chap13.ThreadEx5" />
       <module name="Java-Practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="javaJungsuk.chap11.*" />
+          <option name="PATTERN" value="javaJungsuk.chap13.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -308,19 +369,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.StringReaderWriterEx" />
-      <item itemvalue="Application.BufferedReaderEx1" />
-      <item itemvalue="Application.InputStreamReaderEx" />
-      <item itemvalue="Application.StandardIOEx1" />
-      <item itemvalue="Application.TreeSetLotto" />
+      <item itemvalue="Application.ThreadEx1" />
+      <item itemvalue="Application.ThreadEx2" />
+      <item itemvalue="Application.ThreadEx3" />
+      <item itemvalue="Application.ThreadEx4" />
+      <item itemvalue="Application.ThreadEx5" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TreeSetLotto" />
-        <item itemvalue="Application.StandardIOEx1" />
-        <item itemvalue="Application.InputStreamReaderEx" />
-        <item itemvalue="Application.BufferedReaderEx1" />
-        <item itemvalue="Application.StringReaderWriterEx" />
+        <item itemvalue="Application.ThreadEx5" />
+        <item itemvalue="Application.ThreadEx4" />
+        <item itemvalue="Application.ThreadEx3" />
+        <item itemvalue="Application.ThreadEx2" />
+        <item itemvalue="Application.ThreadEx1" />
       </list>
     </recent_temporary>
   </component>
@@ -334,7 +395,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536228719617</updated>
-      <workItem from="1536561095534" duration="2751000" />
+      <workItem from="1536561095534" duration="6193000" />
     </task>
     <task id="LOCAL-00001" summary="로또머신 클래스 만듬">
       <created>1536230315733</created>
@@ -347,7 +408,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2751000" />
+    <option name="totallyTimeSpent" value="6193000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -787,11 +848,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap11/TreeSetLotto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        <state relative-caret-position="228">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+          <folding>
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="86" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javaJungsuk/chap13/ThreadEx5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>

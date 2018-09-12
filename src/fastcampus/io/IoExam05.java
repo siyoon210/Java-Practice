@@ -10,32 +10,32 @@ import java.io.*;
 //4. 쓰는 방법 : 한졸씩 - PrintWriter
 
 public class IoExam05 {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) {
+        BufferedReader br = null;
+        PrintWriter pw = null;
+        String fileName = "."+File.separator+"tmp"+File.separator+"readLine.txt";
 
-        BufferedReader br = null; // readLine() 한줄읽어들이는 메소드
-        PrintWriter pw = null; // println() 메소드를 가지고 있다.
-        try{
-            br = new BufferedReader(new InputStreamReader(System.in));
-            pw = new PrintWriter(new FileWriter(".\\tmp\\readLine.txt"));
+        try {
+            br= new BufferedReader(new InputStreamReader(System.in));
+            pw= new PrintWriter(new FileWriter(fileName));
             String line = null;
-            int count = 1;
-            while((line = br.readLine()) != null){
-                if("quit".equals(line)){
-                    break; // while문을 끝낸다.
+
+            while ((line=br.readLine())!=null){
+                if(line.equals("quit")){
+                    break;
                 }
-                pw.println(count + " : " + line);
-                count++; // count = count + 1
+                pw.println(line);
             }
-        }catch(Exception ex){
-            ex.printStackTrace();
-        }finally {
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
             try {
                 br.close();
-            }catch(IOException ex){}
-
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             pw.close();
         }
-
 
     }
 }

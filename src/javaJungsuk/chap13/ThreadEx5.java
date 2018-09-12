@@ -11,8 +11,6 @@ public class ThreadEx5 {
         }
         System.out.print("소요시간1: " +(System.currentTimeMillis()-ThreadEx5.startTIme));
 
-
-
     }
 }
 

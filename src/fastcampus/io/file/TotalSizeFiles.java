@@ -9,7 +9,7 @@ public class TotalSizeFiles {
         System.out.println("현재 절대 경로 : "+file.getAbsolutePath());
         int sum = 0;
 
-        System.out.println("현재 경로의 총 용량 : "+ getTotalSize(sum, file) + " byte");
+        System.out.println("현재 경로의 총 용량 : "+ getTotalSize(sum, file) + " byte 입니다.");
     }
 
     static int getTotalSize(int sum, File file){

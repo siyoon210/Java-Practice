@@ -8,12 +8,11 @@ import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
 public class ChatServer extends Thread{
-    private int port; // 서버가 실행되는 port
-    private Set<PrintWriter> socketSet = null;
+    private int port;
+    private Set<PrintWriter> socketSet;
 
-    public ChatServer(int port){
+    public ChatServer(int port) {
         this.port = port;
-        this.socketSet = new CopyOnWriteArraySet();
     }
 
     public void addPrintWriter(PrintWriter out){
@@ -24,7 +23,7 @@ public class ChatServer extends Thread{
         socketSet.remove(out);
     }
 
-    public void broadcast(String msg){
+    public void broadCast(String msg){
         for(PrintWriter out : socketSet){
             try {
                 out.println(msg);
@@ -35,24 +34,26 @@ public class ChatServer extends Thread{
 
     @Override
     public void run() {
-        // 채팅 서버가 해야할 작업을 코딩
-
         ServerSocket serverSocket = null;
-        try{
+        Socket socket = null;
+        try {
             serverSocket = new ServerSocket(port);
 
-            while(true) {
-                Socket socket = serverSocket.accept(); // 블러킹메소드
-                SocketHandler handler = new SocketHandler(this, socket);
-                handler.start();
+            while (true) {
+                socket = serverSocket.accept(); //블록킹 메소드
+                SocketHandler socketHandler = new SocketHandler(this, socket);
+                socketHandler.start();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
-        }catch(IOException ioe){
-            ioe.printStackTrace();
-        }finally {
-            try {
-                serverSocket.close();
-            }catch(Exception ex){}
         }
+
     }
 }

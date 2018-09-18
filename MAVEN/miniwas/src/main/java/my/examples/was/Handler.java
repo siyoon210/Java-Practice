@@ -7,16 +7,16 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Handler extends Thread{
-    private Server server;
+    private Connector connector;
     private Socket socket;
 
     private List<String> requestInfos;
     private String methodName;
     private String pathName;
-    private HashMap headerInfos = new HashMap();
+    private HashMap headerInfos;
 
-    public Handler(Server server, Socket socket) {
-        this.server = server;
+    public Handler(Connector connector, Socket socket) {
+        this.connector = connector;
         this.socket = socket;
     }
 
@@ -38,13 +38,14 @@ public class Handler extends Thread{
     }
 
     public void setHeaderInfos(List<String> requestInfos) {
+        headerInfos = new HashMap();
         for(int i=1; i<requestInfos.size(); i++){
             String[] tmp= requestInfos.get(i).split(":");
 
             if(tmp.length ==2) {
                 headerInfos.put(tmp[0].trim(), tmp[1].trim());
             }
-            else if(tmp.length ==3){
+            else if(tmp.length ==3){ //Host의 포트번호가 80이 아닐경우, 3개로 나누어 진걸 다시 붙인다.
                 headerInfos.put(tmp[0].trim(), tmp[1].trim().concat(":").concat(tmp[2].trim()));
             }
 

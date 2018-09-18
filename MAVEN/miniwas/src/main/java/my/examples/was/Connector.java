@@ -7,11 +7,11 @@ import java.net.Socket;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Server extends Thread{
+public class Connector extends Thread{
     private int port;
     private Set<InetAddress> InetAddresses = new HashSet<>();
 
-    public Server(int port) {
+    public Connector(int port) {
         this.port = port;
     }
 

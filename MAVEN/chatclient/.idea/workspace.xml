@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d3d410d1-000f-4813-b99e-27e719b09275" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/examples/chat/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/examples/chat/ChatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatserver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chatserver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chat/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chat/ChatServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chat/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chat/SocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chatserver/src/main/java/my/examples/chat/SocketHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../out/production/Java-Practice/fastcampus/io/file/TotalSizeFiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../out/production/Java-Practice/fastcampus/io/file/TotalSizeFiles.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../out/production/Java-Practice/javaJungsuk/chap15/exercise15_1/FileHead.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../out/production/Java-Practice/javaJungsuk/chap15/exercise15_1/FileHead.class" afterDir="false" />
     </list>
@@ -23,10 +17,11 @@
     <session id="-1602118499">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -78,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/chat/ChatClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+            <state relative-caret-position="589">
+              <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,52 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/my.examples.chat">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>my.examples.chat</OriginalElement>
-              <nodes>
-                <node x="44.0" y="358.0">my.examples.chat.Main</node>
-                <node x="0.0" y="0.0">my.examples.chat.InputHandler</node>
-                <node x="31.0" y="155.0">my.examples.chat.ChatClient</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="my.examples.chat.ChatClient" target="my.examples.chat.InputHandler">
-                  <point x="-59.5" y="-76.5" />
-                  <point x="90.5" y="130.0" />
-                  <point x="75.0" y="130.0" />
-                  <point x="-75.0" y="52.5" />
-                </edge>
-                <edge source="my.examples.chat.Main" target="my.examples.chat.ChatClient">
-                  <point x="53.0" y="-27.5" />
-                  <point x="203.0" y="333.0" />
-                  <point x="209.5" y="333.0" />
-                  <point x="59.5" y="76.5" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-332.5" y="38.5" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Constructors</Category>
-                <Category>Methods</Category>
-                <Category>Inner Classes</Category>
-                <Category>Properties</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/chat/InputHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="380">
+              <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
               <folding>
                 <element signature="e#206#207#0" expanded="true" />
                 <element signature="e#234#235#0" expanded="true" />
@@ -187,48 +141,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="chatclient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatclient" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chatclient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatclient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chatclient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatclient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chatclient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatclient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chatclient" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chatclient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -282,11 +195,12 @@
       <updated>1537151175875</updated>
       <workItem from="1537151178606" duration="4393000" />
       <workItem from="1537198316115" duration="918000" />
+      <workItem from="1537234508788" duration="853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5311000" />
+    <option name="totallyTimeSpent" value="6164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1000" extended-state="6" />
@@ -354,20 +268,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/chat/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/my.examples.chat">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -393,24 +293,38 @@
               <point x="59.5" y="76.5" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-332.5" y="38.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-332.0" y="39.0" />
           <SelectedNodes />
           <Categories>
             <Category>Fields</Category>
             <Category>Constructors</Category>
             <Category>Methods</Category>
-            <Category>Inner Classes</Category>
             <Category>Properties</Category>
+            <Category>Inner Classes</Category>
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/chat/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/chat/ChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+        <state relative-caret-position="589">
+          <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -419,8 +333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/chat/InputHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state relative-caret-position="380">
+          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
           <folding>
             <element signature="e#206#207#0" expanded="true" />
             <element signature="e#234#235#0" expanded="true" />

@@ -3,7 +3,6 @@ package my.examples.was;
 import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class Handler extends Thread{
@@ -11,57 +10,13 @@ public class Handler extends Thread{
     private Socket socket;
 
     private List<String> requestInfos;
-    private String methodName;
-    private String pathName;
-    private HashMap headerInfos;
+
+    private Response response;
+
 
     public Handler(Connector connector, Socket socket) {
         this.connector = connector;
         this.socket = socket;
-    }
-
-    public void setMethodName(List<String> requestInfos){
-        String[] firstLine = requestInfos.get(0).split(" ");
-        this.methodName = firstLine[0];
-    }
-
-    public void setPathName(List<String> requestInfos){
-        String[] firstLine = requestInfos.get(0).split(" ");
-        this.pathName = firstLine[1];
-
-        if(this.pathName.contains("?")){ //파라미터 값이 있는경우
-             int pos= this.pathName.indexOf("?");
-             this.pathName = this.pathName.substring(0,pos); //? 앞까지만 자름
-            return;
-        }
-
-    }
-
-    public void setHeaderInfos(List<String> requestInfos) {
-        headerInfos = new HashMap();
-        for(int i=1; i<requestInfos.size(); i++){
-            String[] tmp= requestInfos.get(i).split(":");
-
-            if(tmp.length ==2) {
-                headerInfos.put(tmp[0].trim(), tmp[1].trim());
-            }
-            else if(tmp.length ==3){ //Host의 포트번호가 80이 아닐경우, 3개로 나누어 진걸 다시 붙인다.
-                headerInfos.put(tmp[0].trim(), tmp[1].trim().concat(":").concat(tmp[2].trim()));
-            }
-
-        }
-    }
-
-    public String getMethodName() {
-        return methodName;
-    }
-
-    public String getPathName() {
-        return pathName;
-    }
-
-    public HashMap getHeaderInfos() {
-        return headerInfos;
     }
 
     @Override
@@ -82,13 +37,17 @@ public class Handler extends Thread{
                 }
             }
 
-            setMethodName(requestInfos);
-            setPathName(requestInfos);
-            setHeaderInfos(requestInfos);
+            Request request = new Request(requestInfos); //리퀘스트로 요청정보 전송
+            request.requestToServlet();
 
-            System.out.println(getMethodName());
-            System.out.println(getPathName());
-            System.out.println(getHeaderInfos());
+            Response response = new Response(request.getDefaultServlet());
+
+
+            out.println("HTTP/1.0 200 OK\r\n");
+            out.println("\r\n");
+            out.println("<p>Hello</p>");
+            out.println(response.getHandledData());
+            out.flush();
 
         } catch (IOException e) {
             e.printStackTrace();

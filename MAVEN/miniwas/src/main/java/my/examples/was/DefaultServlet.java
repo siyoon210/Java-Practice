@@ -1,20 +1,46 @@
 package my.examples.was;
 
+import java.io.*;
+
 public class DefaultServlet {
-    private String handledData;
-    private Request request;
-    private Response response;
+    public void service(Request request, Response response){
+        OutputStream out = response.getOut();
+        PrintWriter pw = response.getPw();
 
-    //임의의 로직처리
-    public void logicHandling(Request request){
+        String path = request.getPath();
+        if(path.equals("/")){
+            path += "index.html";
+        }
+        File file = new File("tmp"+path);
 
-        //받은 인포들의 length와 size를 리턴
-        int dataLength = request.getPathName().length()+request.getMethodName().length()+request.getHeaderInfos().size();
-        this.handledData =  "<p>sum of requestInfos's length and size : "+dataLength+"</p>";
-    }
+        if (file.exists()) {
+            //HTTP 응답 프로토콜 전송 시작
+            pw.println("HTTP/1.1 200 OK");
+            pw.println("Content-Type: text/html; charset=UTF-8");
+            pw.println("Content-Length: "+ file.length());
+            pw.println("");
+            pw.flush();
 
-    public String getHandledData() {
+            //Body부분 시작
+            try {
+                FileInputStream fis = new FileInputStream(file);
+                byte[] buffer = new byte[512];
+                int readCount = 0;
+                while((readCount = fis.read(buffer))!=-1){
+                    out.write(buffer,0,readCount);
+                    out.flush();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+            }
+        } else {
+            pw.println("HTTP/1.1 404 NOT FOUND");
+            pw.println("Content-Type: text/html; charset=UTF-8");
+            pw.println("");
+            pw.flush();
+        }
 
-        return handledData;
+
     }
 }

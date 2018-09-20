@@ -1,70 +1,57 @@
 package my.examples.was;
 
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
-import java.util.List;
+import java.util.Map;
 
 public class Request{
-    private String methodName;
-    private String pathName;
-    private HashMap headerInfos;
+    private InputStream in;
+    private BufferedReader br;
+    private String method;
+    private String path;
+    private Map<String, String> headers;
 
-    private DefaultServlet defaultServlet;
+    public Request(InputStream in, BufferedReader br) {
+        this.in = in;
+        this.br = br;
 
-    public Request(List<String> requestInfos) {
-        setRequestFields(requestInfos);
-    }
-
-    public void setRequestFields(List<String> requestInfos){
-        String[] firstLine = requestInfos.get(0).split(" ");
-
-        //메소드 이름 설정
-        this.methodName = firstLine[0];
-
-        //패스 설정
-        this.pathName = firstLine[1];
-
-        if(this.pathName.contains("?")){ //파라미터 값이 있는경우
-            int pos= this.pathName.indexOf("?");
-            this.pathName = this.pathName.substring(0,pos); //? 앞까지만 자름
-            return;
-        }
-
-        //헤더 인포 설정
-        headerInfos = new HashMap();
-        for(int i=1; i<requestInfos.size(); i++){
-            String[] tmp= requestInfos.get(i).split(":");
-
-            if(tmp.length ==2) {
-                headerInfos.put(tmp[0].trim(), tmp[1].trim());
-            }
-            else if(tmp.length ==3){ //Host의 포트번호가 80이 아닐경우, 3개로 나누어 진걸 다시 붙인다.
-                headerInfos.put(tmp[0].trim(), tmp[1].trim().concat(":").concat(tmp[2].trim()));
+        try {
+            String[] requestLine = br.readLine().split(" ");
+            method = requestLine[0];
+            path = requestLine[1];
+            if(path.contains("?")){
+                int pos = path.indexOf("?");
+                path = path.substring(0, pos);
             }
 
+            String line = null;
+            headers = new HashMap<>();
+            while ((line = br.readLine())!=null){
+                if(line.equals("")) break; //빈줄이라면 반복종료
+                int pos = line.indexOf(":");
+                headers.put(line.substring(0, pos), line.substring(pos+1));
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
         }
+
+
+    }//Constructor
+
+    public String getMethod() {
+        return method;
     }
 
-    public void requestToServlet(){
-        DefaultServlet defaultServlet =new DefaultServlet();
-        defaultServlet.logicHandling(this);
-
-        this.defaultServlet = defaultServlet;
+    public String getPath() {
+        return path;
     }
 
-    public DefaultServlet getDefaultServlet() {
-        return defaultServlet;
+    public Map<String, String> getHeaders() {
+        return headers;
     }
-
-    public String getMethodName() {
-        return methodName;
-    }
-
-    public String getPathName() {
-        return pathName;
-    }
-
-    public HashMap getHeaderInfos() {
-        return headerInfos;
-    }
-
 }

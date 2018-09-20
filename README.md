@@ -1,2 +1,2 @@
 # Java-Practice
-Java 연습용
+For JAVA study

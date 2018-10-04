@@ -1,0 +1,8 @@
+my/examples/servlet/GuestbookDeleteServlet.class
+my/examples/servlet/GuestbookWriteServlet.class
+my/examples/guestbook/servlet/GuestbookListServlet.class
+my/examples/guestbook/servlet/GuestbookLoginServlet.class
+my/examples/guestbook/servlet/GuestbookWriteServlet.class
+my/examples/servlet/GuestbookListServlet.class
+my/examples/guestbook/servlet/GuestbookLogoutServlet.class
+my/examples/guestbook/servlet/GuestbookDeleteServlet.class

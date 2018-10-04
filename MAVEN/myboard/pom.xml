@@ -35,6 +35,13 @@
             <artifactId>mariadb-java-client</artifactId>
             <version>2.3.0</version>
         </dependency>
+
+        <!--java.sql.Date를 LocalDateTime으로 바꾸기 위한 의존-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-java8</artifactId>
+            <version>5.1.0.Final</version>
+        </dependency>
     </dependencies>
 
     <build>

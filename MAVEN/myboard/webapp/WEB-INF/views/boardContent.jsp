@@ -1,6 +1,8 @@
-<%@ page import="my.examples.board.dao.JDBCForContent" %>
+
 <%@ page import="java.util.HashMap" %>
-<%@ page import="java.util.Map" %><%--
+<%@ page import="java.util.Map" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
   Created by IntelliJ IDEA.
   User: siyoon
   Date: 18. 10. 2
@@ -21,26 +23,18 @@
 <div class="container">
 <h3>게시판 본문</h3>
 <div>
-    <%
-        JDBCForContent jdbcForContent = new JDBCForContent();
-        Map boardContent = new HashMap();
-        boardContent = jdbcForContent.getBoardContent();
-        jdbcForContent.run(Integer.parseInt(request.getParameter("cid")));
 
-        out.print("글쓴이 : ");
-        out.println(boardContent.get("name"));
-        out.print("<br>");
-        out.print("제목 : ");
-        out.println(boardContent.get("title"));
-        out.print("<br>");
-        out.print("<br>");
-        out.println(boardContent.get("content"));
-
-
-    %>
+        <span>글쓴이 : ${requestScope.boardArticle.name}</span><br>
+        <span>제목 : ${requestScope.get("boardArticle").title}</span><br>
+        <span>작성일자 : ${requestScope.get("boardArticle").date}</span><span>  글번호 ${requestScope.get("boardArticle").cid}</span><br>
+        <br><span>${requestScope.get("boardArticle").content}</span><br>
     <br>
     <br>
     <a class="btn btn-primary" href ="/board/list">목록으로 </a>
+
+        <c:if test="${sessionScope.admin == 'true'}">
+            <a class="btn btn-primary" href ="/board/delete?cid=${requestScope.get("boardArticle").cid}">삭제 </a>
+        </c:if>
 
 </div>
 </div>

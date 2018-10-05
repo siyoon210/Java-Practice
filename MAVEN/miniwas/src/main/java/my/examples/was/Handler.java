@@ -3,8 +3,18 @@ package my.examples.was;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Handler extends Thread{
+    private static Map<String, Class> map;
+    private static Map<String, HttpServlet> servletMap;
+    static{
+        servletMap = new HashMap<>();
+        WebServletMapperManager wsmm = new WebServletMapperManager();
+        map = wsmm.findServlet("/home/siyoon/Documents/Java-Practice/MAVEN/miniwas/target/classes/");
+    }
+
     private Socket socket;
 
     public Handler(Socket socket) {
@@ -17,6 +27,7 @@ public class Handler extends Thread{
         BufferedReader br = null;
         OutputStream out = null;
         PrintWriter pw = null;
+
 
         try {
             in = socket.getInputStream();

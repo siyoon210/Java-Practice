@@ -14,14 +14,20 @@ public class GenericsTest {
         //list2.add(100); //String만 받기로 되어있어서 숫자는 담을 수 없다.
 
         MyClass<String> myClass = new MyClass<String>();
-//        MyC다lass2<String> myClass2 = new MyClass2<String>(); //Number와 그의 자손이 아니면 사용 할 수 없
+//        MyClass2<String> myClass2 = new MyClass2<String>(); //Number와 그의 자손이 아니면 사용 할 수 없음
 
+        myMethod2(myClass);
+        //myMethod3(myClass);
     }
 
 //    public void myMethod1(MyClass<T extends Number> myClass) { //T라는 키워드는 메소드 선언당시 아예 안됨 T는 제네릭 클래스를 선언할때 타입변수 제한을 쓸떄 사용한다.
 //    }
 
-    public void myMethod2(MyClass<? extends Number> myClass) {
+    public static void myMethod2(MyClass<? extends String> myClass) {
+    }
+
+    public static <T extends Number> void myMethod3(MyClass<T> myClass) {
+
     }
 }
 

@@ -1,6 +1,6 @@
 package fastcampus.Collections.sort;
 
-public class Book implements Comparable<Book>{
+public class Book implements Comparable<Book> {
     String name;
     int price;
     int releaseYear;
@@ -8,7 +8,7 @@ public class Book implements Comparable<Book>{
     public Book(String name, int price, int releaseYear) {
         this.name = name;
         this.price = price;
-        this.releaseYear=releaseYear;
+        this.releaseYear = releaseYear;
     }
 
     public String getName() {
@@ -25,6 +25,6 @@ public class Book implements Comparable<Book>{
 
     @Override
     public int compareTo(Book o) {
-        return price- o.price;
+        return price - o.getPrice();
     }
 }

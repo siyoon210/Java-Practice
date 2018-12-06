@@ -1,5 +1,7 @@
 package javaJungsuk.chap14.exercise14_1;
 
+import java.util.function.Function;
+
 public class Exercise14_1 {
     int max(int a, int b) {
         return a > b ? a : b;
@@ -43,6 +45,5 @@ public class Exercise14_1 {
     // () -> new int[]{}
 
     //문장이 아닌 식일때는 세미콜론 생략한다!
-
 
 }

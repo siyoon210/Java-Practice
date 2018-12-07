@@ -1,4 +1,4 @@
 package my.examples.javaexam;
 
-public class Action {
+public class AppleBox {
 }

@@ -10,9 +10,9 @@ public class LottoMachine {
     public void mix() {
         Collections.shuffle(lottoBalls);
     }
-    public List<LottoBall> getLottoBalls() {
+    public List<LottoBall> getLottoBalls(int count) {
         List<LottoBall> selectedBalls = new ArrayList<>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < count; i++) {
             selectedBalls.add(lottoBalls.get(i));
         }
         return selectedBalls;

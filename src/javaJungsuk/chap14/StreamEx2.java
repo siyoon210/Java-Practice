@@ -18,7 +18,7 @@ public class StreamEx2 {
         //Stream으로 변환하기
         Stream<File> fileStream = Stream.of(fileArr);
 
-        //Stream<File>을 Stream<String>으로 변환하기
+        //Stream<File>을 Stream<string>으로 변환하기
         Stream<String> filnenameStream = fileStream.map(File::getName);
 
         //모든 파일이름 출력

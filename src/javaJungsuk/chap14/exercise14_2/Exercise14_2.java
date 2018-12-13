@@ -2,8 +2,8 @@ package javaJungsuk.chap14.exercise14_2;
 
 //메소드 참조로 바꾸기
 public class Exercise14_2 {
-    //(String s) -> s.length()
-    //String::length
+    //(string s) -> s.length()
+    //string::length
 
     //()-> new int[]{}
     //변환불가 (X) int[]::new
@@ -11,13 +11,13 @@ public class Exercise14_2 {
     //arr -> Arrays.stream(arr)
     //Arrays::stream
 
-    //(String str1, String str2) -> str1.equals(str2)
-    //String::equals
+    //(string str1, string str2) -> str1.equals(str2)
+    //string::equals
 
     //(a,b)->Integer.compare(a,b)
     //Integer::compare
 
-    //(String kind, int num) -> new Card(kind, num)
+    //(string kind, int num) -> new Card(kind, num)
     //변환불가 (X) -> Card::new
 
     //(x) -> System.out.println(x)
@@ -27,7 +27,7 @@ public class Exercise14_2 {
     //Math::random
 
     //(str) -> str.toUpperCase()
-    //String::toUppperCase
+    //string::toUppperCase
 
     //() -> new NullPointerException()
     //NullPointerException::new
@@ -35,10 +35,10 @@ public class Exercise14_2 {
     //(Optional opt) -> opt.get()
     //Optionlal::get
 
-    //(StringBuffer sb, String s) -> sb.append(s)
+    //(StringBuffer sb, string s) -> sb.append(s)
     //StringBuffer::append
 
-    //(String s) -> System.out.println(s)
+    //(string s) -> System.out.println(s)
     //System.out::println
 
 

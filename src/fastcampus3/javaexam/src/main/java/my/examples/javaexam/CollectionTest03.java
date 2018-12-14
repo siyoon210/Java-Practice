@@ -1,4 +1,4 @@
-package fastcampus3.javaexam.src.main;
+package fastcampus3.javaexam.src.main.java.my.examples.javaexam;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -17,9 +17,12 @@ public class CollectionTest03 {
         //Q)모든 키들을 출력하시오.
 
         //A)
-        while (map.keySet().iterator().hasNext()) {
-            String str = map.keySet().iterator().next();
+        Iterator<String> iterator = map.keySet().iterator();
+        while (iterator.hasNext()) {
+            String str = iterator.next();
             System.out.println(str);
         }
+
+        map.forEach((key, value) -> System.out.println("키는 :" + key));
     }
 }

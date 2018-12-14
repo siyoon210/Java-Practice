@@ -1,28 +1,40 @@
-package fastcampus3.javaexam.src.main.java.my.examples.javaexam.folderfile;
+package my.examples.javaexam.folderfile;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class File {
     private String name;
-    private long length;
+    private List<String> list;
 
-    public File(String name){
-        this.name = name;
+    public File() {
+        list = new ArrayList<>();
     }
 
-    public void rename(String name){
-        this.name = name;
+    public List<String> getList() {
+        return list;
     }
 
-    public String getName(){
+    public void getHashcode() {
+        System.out.println(this.hashCode());
+    }
+
+    public String getName() {
         return name;
     }
 
-    public void setLength(long length){
-        this.length = length;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public long getLength(){
-        return length;
+    public void printList() {
+        for (String str : list) {
+            System.out.println(str);
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }
-
-

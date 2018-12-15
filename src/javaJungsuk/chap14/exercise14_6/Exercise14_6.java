@@ -1,12 +1,18 @@
-package javaJungsuk.chap14.exercise14_5;
+package javaJungsuk.chap14.exercise14_6;
 
+import java.util.Comparator;
 import java.util.stream.Stream;
 
-//String[] strArr = { "aaa","bb","c", "dddd" }; 의 모든 문자열의 길이를 더한 결과를 출력하라.
-public class Exercise14_5 {
+//String[] strArr = { "aaa","bb","c", "dddd" }; 의 모든 문자열의 길이중 제일 긴것을 출력.
+public class Exercise14_6 {
     public static void main(String[] args) {
         String[] strArr = { "aaa","bb","c", "dddd" };
+
         Stream<String> strArrStream = Stream.of(strArr);
-        System.out.println(strArrStream.mapToInt(String::length).sum());
+        System.out.println(strArrStream.mapToInt(String::length).max().getAsInt());
+
+        strArrStream = Stream.of(strArr);
+        strArrStream.map(String::length).sorted(Comparator.reverseOrder()).limit(1).forEach(System.out::println);
+
     }
 }

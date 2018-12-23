@@ -1,4 +1,5 @@
 package practice.stringbuffer;
 
-public class StringbufferTest {
+public class StringTest {
+
 }

@@ -6,12 +6,12 @@ class Student {
     private String name;
     private int preTeamIndex;
 
-    public Student(String name, int teamIndex) {
+    Student(String name, int teamIndex) {
         this.name = name;
         this.preTeamIndex = teamIndex;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
@@ -35,20 +35,20 @@ class Team {
     private Set<Student> students;
     private int maxSize;
 
-    public Team(int maxSize) {
+    Team(int maxSize) {
         this.students = new HashSet<>();
         this.maxSize = maxSize;
     }
 
-    public Set<Student> getStudents() {
+    Set<Student> getStudents() {
         return students;
     }
 
-    public void setStudents(Set<Student> students) {
+    void setStudents(Set<Student> students) {
         this.students = students;
     }
 
-    public int getMaxSize() {
+    int getMaxSize() {
         return maxSize;
     }
 }
@@ -59,7 +59,7 @@ public class TeamMaker {
         students.add(new Student("박재희", 1));
         students.add(new Student("최원오", 1));
         students.add(new Student("김대용", 1));
-        students.add(new Student("조은현", 2));
+        students.add(new Student("여현석", 2));
 //        students.add(new Student("백병화", 2));
         students.add(new Student("박찬종", 2));
         students.add(new Student("최주리", 3));
@@ -68,8 +68,8 @@ public class TeamMaker {
         students.add(new Student("윤여훈", 4));
         students.add(new Student("최다빈", 4));
         students.add(new Student("정미수", 4));
-        students.add(new Student("여현석", 5));
-        students.add(new Student("윤정", 5));
+        students.add(new Student("조은현", 5));
+        students.add(new Student("윤 정", 5));
 
         List<Team> teams = new ArrayList<>();
         teams.add(new Team(3));
@@ -81,8 +81,7 @@ public class TeamMaker {
         while (true){
             Collections.shuffle(students);
             for (Student student : students) {
-                for (int i = 0; i < teams.size(); i++) {
-                    Team team = teams.get(i);
+                for (Team team : teams) {
                     if (team.getStudents().size() < team.getMaxSize() && team.getStudents().add(student)) {
                         break;
                     }
@@ -103,10 +102,9 @@ public class TeamMaker {
 
 
         for (Team t : teams) {
-            Iterator<Student> iterator = t.getStudents().iterator();
-            while (iterator.hasNext()) {
-                System.out.print(iterator.next().getName() + "\t");
-                Thread.sleep(0);
+            for (Student s : t.getStudents()) {
+                System.out.print(s.getName()+"\t");
+                Thread.sleep(10);
             }
             System.out.println();
         }

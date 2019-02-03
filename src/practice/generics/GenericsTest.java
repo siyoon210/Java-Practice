@@ -10,11 +10,11 @@ public class GenericsTest {
 
 
         ArrayList<String> list2 = new ArrayList<String>();
-        list2.add("String");
+        list2.add("string");
         //list2.add(100); //String만 받기로 되어있어서 숫자는 담을 수 없다.
 
         MyClass<String> myClass = new MyClass<String>();
-//        MyClass2<String> myClass2 = new MyClass2<String>(); //Number와 그의 자손이 아니면 사용 할 수 없음
+//        MyClass2<string> myClass2 = new MyClass2<string>(); //Number와 그의 자손이 아니면 사용 할 수 없음
 
         myMethod2(myClass);
         //myMethod3(myClass);

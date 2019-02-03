@@ -1,6 +1,4 @@
-package practice.String;
-
-import java.util.ArrayList;
+package practice.string;
 
 public class IsEmpty {
     public static void main(String[] args) {

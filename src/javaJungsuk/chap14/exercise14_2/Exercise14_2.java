@@ -32,7 +32,7 @@ public class Exercise14_2 {
     //() -> new NullPointerException()
     //NullPointerException::new
 
-    //(Optional opt) -> opt.get()
+    //(OptionalTest opt) -> opt.get()
     //Optionlal::get
 
     //(StringBuffer sb, string s) -> sb.append(s)

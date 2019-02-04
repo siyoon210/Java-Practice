@@ -65,7 +65,7 @@ public class TeamMaker {
         students.add(new Student("최주리", 3));
         students.add(new Student("서청원", 3));
         students.add(new Student("민경수", 3));
-        students.add(new Student("윤여훈", 4));
+//        students.add(new Student("윤여훈", 4));
         students.add(new Student("최다빈", 4));
         students.add(new Student("정미수", 4));
         students.add(new Student("조은현", 5));
@@ -75,8 +75,8 @@ public class TeamMaker {
         teams.add(new Team(3));
         teams.add(new Team(3));
         teams.add(new Team(3));
-        teams.add(new Team(2));
-        teams.add(new Team(2));
+        teams.add(new Team(3));
+
 
         while (true){
             Collections.shuffle(students);
@@ -104,7 +104,7 @@ public class TeamMaker {
         for (Team t : teams) {
             for (Student s : t.getStudents()) {
                 System.out.print(s.getName()+"\t");
-                Thread.sleep(10);
+                Thread.sleep(1000);
             }
             System.out.println();
         }

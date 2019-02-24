@@ -1,33 +1,32 @@
 package practice.interfacetest.multipleextends;
 
-interface SuperInterface{
-    void superMethod();
+interface GrandFather {
+    default void myMethod(){
+        System.out.println("GrandFather");
+    };
 }
 
-interface SubInterface1 extends SuperInterface{
-    void subMethod();
-
+interface FatherA extends GrandFather {
     @Override
-    void superMethod();
+    default void myMethod(){
+        System.out.println("FatherA");
+    }
 }
 
-interface SubInterface2 extends SuperInterface{
-    int subMethod();
-
+interface FatherB extends GrandFather {
     @Override
-    void superMethod();
+    default void myMethod(){
+        System.out.println("FatherB");
+    }
 }
 
-//interface BottomInterface extends SubInterface1, SubInterface2 {
-//    @Override
-//    void subMethod();
+//interface Son extends FatherA, FatherB{
 //
-//    @Override
-//    void superMethod();
 //}
+
+
 public class MultipleExtends {
     public static void main(String[] args) {
-        int x = 10;
-        System.out.println(x);
+
     }
 }

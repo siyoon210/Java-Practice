@@ -31,7 +31,7 @@ public class Request{
             headers = new HashMap<>();
             while ((line = br.readLine())!=null){
                 if(line.equals("")) break; //빈줄이라면 반복종료
-                int pos = line.indexOf(":");
+                int pos = line.indexOf(": ");
                 headers.put(line.substring(0, pos), line.substring(pos+1));
             }
 

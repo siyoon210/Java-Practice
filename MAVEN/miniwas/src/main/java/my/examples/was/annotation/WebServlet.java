@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
 public @interface WebServlet {
     String name() default "";
 
-   // String[] value() default {};
+   // string[] value() default {};
     String value() default "";
 
     String[] urlPatterns() default {};

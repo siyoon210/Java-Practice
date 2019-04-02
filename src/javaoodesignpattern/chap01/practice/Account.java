@@ -14,6 +14,6 @@ class Account {
     }
 
     protected Double getBalance() {
-        
+        return null;
     }
 }

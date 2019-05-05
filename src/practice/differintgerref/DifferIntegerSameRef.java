@@ -18,6 +18,13 @@ class MyInteger{
 
 public class DifferIntegerSameRef {
     public static void main(String[] args) {
+        Integer integer1 = 1;
+        Integer integer2 = integer1;
+        integer2 = 2;
+
+        System.out.println("integer1 + " + integer1);
+        System.out.println("integer2 + " + integer2);
+
         MyInteger myInteger1 = new MyInteger(1);
         MyInteger myInteger2 = myInteger1;
 

@@ -5,52 +5,26 @@ import java.util.Map;
 import java.util.function.BiFunction;
 
 class Calculator {
-    enum Operator {
-        PLUS("+", (num1, num2) -> num1 + num2),
-        MINUS("-", (num1, num2) -> num1 - num2),
-        MULTIPLY("*", (num1, num2) -> num1 * num2),
-        DIVIDE("/", (num1, num2) -> num1 / num2);
+    private static Map<String, BiFunction<Double, Double, Double>> stringOperatorMap;
 
-        private String strOperator;
-        private BiFunction<Double, Double, Double> expression;
-
-        Operator(String strOperator, BiFunction<Double, Double, Double> expression) {
-            this.strOperator = strOperator;
-            this.expression = expression;
-        }
-
-        public double calc(double num1, double num2) {
-            return this.expression.apply(num1, num2);
-        }
+    static {
+        stringOperatorMap = new HashMap<>();
+        stringOperatorMap.put("+", (num1, num2) -> num1 + num2);
+        stringOperatorMap.put("-", (num1, num2) -> num1 - num2);
+        stringOperatorMap.put("*", (num1, num2) -> num1 * num2);
+        stringOperatorMap.put("/", (num1, num2) -> num1 / num2);
     }
 
-    private Map<String, Operator> stringOperatorMap;
-
-    Calculator() {
-        initMap();
-    }
-
-    private void initMap() {
-        this.stringOperatorMap = new HashMap<>();
-        for (Operator value : Operator.values()) {
-            stringOperatorMap.put(value.strOperator, value);
-        }
-    }
-
-    public double calc(String operator, double num1, double num2) {
-        if (!stringOperatorMap.containsKey(operator)) {
-            throw new IllegalArgumentException("올바른 연산자가 아닙니다.");
-        }
-        return stringOperatorMap.get(operator).expression.apply(num1, num2);
+    public static double calc(String operator, double num1, double num2) {
+        return stringOperatorMap.get(operator).apply(num1, num2);
     }
 }
 
 public class CalcWithoutIfStatement {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
-        System.out.println("calculator.calc(\"+\", 10, 2) = " + calculator.calc("+", 10, 2));
-        System.out.println("calculator.calc(\"-\", 10, 2) = " + calculator.calc("-", 10, 2));
-        System.out.println("calculator.calc(\"*\", 10, 2) = " + calculator.calc("*", 10, 2));
-        System.out.println("calculator.calc(\"/\", 11, 2) = " + calculator.calc("a", 11, 2));
+        System.out.println("calculator.calc(\"+\", 10, 2) = " + Calculator.calc("+", 10, 2));
+        System.out.println("calculator.calc(\"-\", 10, 2) = " + Calculator.calc("-", 10, 2));
+        System.out.println("calculator.calc(\"*\", 10, 2) = " + Calculator.calc("*", 10, 2));
+        System.out.println("calculator.calc(\"/\", 11, 2) = " + Calculator.calc("/", 11, 2));
     }
 }

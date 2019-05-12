@@ -38,6 +38,9 @@ class Calculator {
     }
 
     public double calc(String operator, double num1, double num2) {
+        if (!stringOperatorMap.containsKey(operator)) {
+            throw new IllegalArgumentException("올바른 연산자가 아닙니다.");
+        }
         return stringOperatorMap.get(operator).expression.apply(num1, num2);
     }
 }
@@ -48,6 +51,6 @@ public class CalcWithoutIfStatement {
         System.out.println("calculator.calc(\"+\", 10, 2) = " + calculator.calc("+", 10, 2));
         System.out.println("calculator.calc(\"-\", 10, 2) = " + calculator.calc("-", 10, 2));
         System.out.println("calculator.calc(\"*\", 10, 2) = " + calculator.calc("*", 10, 2));
-        System.out.println("calculator.calc(\"/\", 11, 2) = " + calculator.calc("/", 11, 2));
+        System.out.println("calculator.calc(\"/\", 11, 2) = " + calculator.calc("a", 11, 2));
     }
 }

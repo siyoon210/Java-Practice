@@ -1,17 +1,17 @@
 package me.siyoon.russiancalculator;
 
-import me.siyoon.russiancalculrator.PathFinder;
+import me.siyoon.russiancalculrator.PathFinderImpl;
 import org.junit.Before;
 import org.junit.Test;
 
 public class PathFinderTest {
-    private PathFinder pathFinder;
+    private PathFinderImpl pathFinder;
 
     @Before
     public void init() {
         int maxCount = 5;
         int targetNum = 61;
-        pathFinder = new PathFinder(maxCount, targetNum);
+        pathFinder = new PathFinderImpl(maxCount, targetNum);
     }
 
     @Test

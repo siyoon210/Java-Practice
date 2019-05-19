@@ -2,7 +2,8 @@ package me.siyoon.russiancalculrator;
 
 public class Main {
     public static void main(String[] args) {
-        PathFinder pathFinder = new PathFinder(17, 59);
+        System.out.println("시작");
+        PathFinder pathFinder = new PathPrinter(4, 4);
         pathFinder.searchPath();
         System.out.println("끝");
     }

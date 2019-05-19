@@ -2,26 +2,16 @@ package me.siyoon.russiancalculrator;
 
 import java.util.LinkedList;
 
-public class PathPrinter extends PathFinderImpl {
+public class PathPrinter extends PathFinder {
     private LinkedList<String> actions;
 
     public PathPrinter(final long targetNum, final int maxTryCount) {
         super(targetNum, maxTryCount);
-        initActions();
-    }
-
-    private void initActions() {
         actions = new LinkedList<String>();
     }
 
     @Override
-    public void searchPath() {
-        super.searchPath();
-    }
-
-    @Override
-    public void searchPath(final long num, final int tryCount) {
-        super.searchPath(num, tryCount);
+    protected void printProcess() {
     }
 
     @Override

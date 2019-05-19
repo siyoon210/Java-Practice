@@ -9,8 +9,8 @@ public class PathFinderTest {
 
     @Before
     public void init() {
-        int maxCount = 20;
-        int targetNum = 4;
+        int maxCount = 5;
+        int targetNum = 61;
         pathFinder = new PathFinder(maxCount, targetNum);
     }
 

@@ -7,6 +7,10 @@ import java.util.function.BiFunction;
 class Calculator {
     private static Map<String, BiFunction<Double, Double, Double>> stringOperatorMap;
 
+    private Calculator() {
+        throw new AssertionError();
+    }
+
     static {
         stringOperatorMap = new HashMap<>();
         stringOperatorMap.put("+", (num1, num2) -> num1 + num2);

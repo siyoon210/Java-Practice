@@ -6,7 +6,7 @@ package practice.wrapperclass;
  */
 public class sumReferenceType {
     public static void main(String[] args) {
-        Long num = 0L;
+        Long num = 3000L;
         Long l1 = num;
 
         num += 1;
@@ -15,6 +15,14 @@ public class sumReferenceType {
             System.out.println("숫자가 변해도 같은 참조다.");
         } else {
             System.out.println("숫자가 변하면 다른 참조지!");
+        }
+
+        Long num2 = 3000L;
+
+        if (num2 == l1) {
+            System.out.println("숫자가 같으면 같은 참조다.");
+        } else {
+            System.out.println("숫자가 같아도 다른 참조지!");
         }
 
         String str = "hello";

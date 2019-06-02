@@ -24,8 +24,9 @@ class MyClass {
 
 public class StaticClass {
     public static void main(String[] args) {
-        List myList1 = MyClass.myList;
-        List myList2 = MyClass.myList;
+        List myList1 = new MyClass().myList;
+        List myList2 = new MyClass().myList;
+
         if (myList1 == myList2) {
             System.out.println("스태틱 필드는 다 같은 참조");
         } else {

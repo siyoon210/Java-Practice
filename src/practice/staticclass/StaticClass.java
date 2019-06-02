@@ -5,6 +5,8 @@ import java.util.List;
 class MyClass {
     static List myList;
 
+    int id = 100;
+
     class InnerClass{}
 
     static class InnerStaticClass{}
@@ -35,5 +37,10 @@ public class StaticClass {
         } else {
             System.out.println("내부 스태틱 클래스도 클래스니까 다른 참조지");
         }
+
+
+        MyClass mc = new MyClass();
+        MyClass.InnerClass mic3 = mc.new InnerClass(); //mic3은 "mc에 대한 숨은 외부 참조"를 갖는다.
+        MyClass.InnerStaticClass misc3 = new MyClass.InnerStaticClass(); //misc3은 그딴 거 없다.
     }
 }

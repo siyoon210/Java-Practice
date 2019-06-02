@@ -5,11 +5,21 @@ import java.util.List;
 class MyClass {
     static List myList;
 
-    int id = 100;
+    class InnerClass{
+        void innerClassMethod() {
+            MyClass.this.myMethod(); //숨은 외부 참조가 있기 때문에 가능
+        }
+    }
 
-    class InnerClass{}
+    static class InnerStaticClass{
+        void innerClassMethod() {
+//            MyClass.this.myMethod(); //컴파일 에러
+        }
+    }
 
-    static class InnerStaticClass{}
+    void myMethod() {
+
+    }
 }
 
 public class StaticClass {

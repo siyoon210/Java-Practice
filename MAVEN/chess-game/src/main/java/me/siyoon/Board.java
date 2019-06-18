@@ -10,16 +10,8 @@ public enum Board {
     a2(6,0), b2(6,1), c2(6,2), d2(6,3), e2(6,4), f2(6,5), g2(6,6), h2(6,7),
     a1(7,0), b1(7,1), c1(7,2), d1(7,3), e1(7,4), f1(7,5), g1(7,6), h1(7,7);
 
-    private int indexI;
-    private int indexJ;
-    private Coordinate coordinate;
+    private final Coordinate coordinate;
     private Chessmen chessmen;
-
-    Board(final int indexI, final int indexJ) {
-        this.indexI = indexI;
-        this.indexJ = indexJ;
-        coordinate = new Coordinate(indexI, indexJ);
-    }
 
     static class Coordinate{
         private int i;
@@ -37,5 +29,21 @@ public enum Board {
         public int getJ() {
             return j;
         }
+    }
+
+    Board(final int indexI, final int indexJ) {
+        coordinate = new Coordinate(indexI, indexJ);
+    }
+
+    public Coordinate getCoordinate() {
+        return coordinate;
+    }
+
+    public Chessmen getChessmen() {
+        return chessmen;
+    }
+
+    public void setChessmen(final Chessmen chessmen) {
+        this.chessmen = chessmen;
     }
 }

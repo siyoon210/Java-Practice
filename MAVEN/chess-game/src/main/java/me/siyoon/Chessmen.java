@@ -1,10 +1,10 @@
 package me.siyoon;
 
 public abstract class Chessmen {
-    private Coordinate coordinate;
+    private Board board;
 
-    public Chessmen(final Coordinate coordinate) {
-        this.coordinate = coordinate;
+    public Chessmen(final Board board) {
+        this.board = board;
     }
 
     public abstract boolean move();

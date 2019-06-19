@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac613564-a506-432e-ab11-8852ef534e4f" name="Default Changelist" comment="클래스 만듬">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAVEN/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/MAVEN/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAVEN/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MAVEN/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAVEN/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MAVEN/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MAVEN/RussianCalculrator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MAVEN/RussianCalculrator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/practice/serialization/user1Info.bin" beforeDir="false" afterPath="$PROJECT_DIR$/src/practice/serialization/user1Info.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MAVEN/chess-game/src/main/java/me/siyoon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MAVEN/chess-game/src/main/java/me/siyoon/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/src/fastcampus3/businesscard/target/" />
@@ -142,7 +136,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="x" value="1680" />
     <option name="width" value="2560" />
     <option name="height" value="1080" />
@@ -155,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,6 +248,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -500,6 +494,7 @@
       <workItem from="1559792339194" duration="5317000" />
       <workItem from="1559907192197" duration="1710000" />
       <workItem from="1560076958406" duration="225000" />
+      <workItem from="1560920676169" duration="39000" />
     </task>
     <task id="LOCAL-00001" summary="로또머신 클래스 만듬">
       <created>1536230315733</created>
@@ -512,7 +507,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238017000" />
+    <option name="totallyTimeSpent" value="238056000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -527,7 +522,7 @@
     <frame x="1680" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48467153" visible="true" weight="0.12015968" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48467153" visible="true" weight="0.121357284" />
       <window_info id="Structure" order="1" sideWeight="0.51532847" side_tool="true" weight="0.21375921" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />

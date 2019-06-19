@@ -10,6 +10,9 @@ public enum Board {
     a2(6,0), b2(6,1), c2(6,2), d2(6,3), e2(6,4), f2(6,5), g2(6,6), h2(6,7),
     a1(7,0), b1(7,1), c1(7,2), d1(7,3), e1(7,4), f1(7,5), g1(7,6), h1(7,7);
 
+    private final static int WIDTH = 8;
+    private final static int HEIGHT = 8;
+
     private final Coordinate coordinate;
     private Chessmen chessmen;
 
@@ -45,5 +48,12 @@ public enum Board {
 
     public void setChessmen(final Chessmen chessmen) {
         this.chessmen = chessmen;
+    }
+
+    public static Board getBoardByIndex(final int i, final int j) {
+        final char c = (char)('a' + j);
+        final int n = WIDTH - i;
+
+        return Board.valueOf(c + String.valueOf(n));
     }
 }

@@ -4,7 +4,7 @@ public class Pawn extends Chessmen {
     private final char charValue = 'p';
 
     @Override
-    public boolean move() {
+    public boolean moveTo(Board to) {
         return false;
     }
 

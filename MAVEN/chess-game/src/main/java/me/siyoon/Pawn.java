@@ -3,6 +3,10 @@ package me.siyoon;
 public class Pawn extends Chessmen {
     private final char charValue = 'p';
 
+    public Pawn(Color color) {
+        super(color);
+    }
+
     @Override
     public boolean moveTo(Board to) {
         return false;
@@ -10,6 +14,9 @@ public class Pawn extends Chessmen {
 
     @Override
     public char getCharValue() {
+        if (super.color == Color.BLACK) {
+            return charValue;//TODO 대문자로
+        }
         return charValue;
     }
 }

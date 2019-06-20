@@ -17,7 +17,7 @@ public class Pawn extends Chessmen {
     @Override
     public char getCharValue() {
         if (super.color == Color.BLACK) {
-            return charValue;//TODO 대문자로
+            return Character.toUpperCase(charValue);
         }
         return charValue;
     }

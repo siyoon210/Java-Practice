@@ -40,6 +40,11 @@ public enum Board {
         return Board.valueOf(c + String.valueOf(n));
     }
 
+    public static Chessmen getChessmenByIndex(final int i, final int j) {
+        return Board.getBoardByIndex(i, j).getChessmen();
+    }
+
+
     static class Coordinate{
         private int i;
         private int j;

@@ -1,4 +1,6 @@
-package me.siyoon;
+package me.siyoon.chessmen;
+
+import me.siyoon.Board;
 
 public abstract class Chessmen {
     protected Color color;

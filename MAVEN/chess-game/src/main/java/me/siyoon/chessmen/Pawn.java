@@ -1,4 +1,6 @@
-package me.siyoon;
+package me.siyoon.chessmen;
+
+import me.siyoon.Board;
 
 public class Pawn extends Chessmen {
     private final char charValue = 'p';

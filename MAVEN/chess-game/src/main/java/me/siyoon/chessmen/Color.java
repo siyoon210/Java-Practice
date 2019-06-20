@@ -1,4 +1,4 @@
-package me.siyoon;
+package me.siyoon.chessmen;
 
 public enum Color {
     BLACK, WHITE

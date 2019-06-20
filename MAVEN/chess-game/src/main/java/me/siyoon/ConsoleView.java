@@ -12,7 +12,7 @@ public class ConsoleView {
                 if (chessmen == null) {
                     System.out.print(EMPTY_COORDINATE_VALUE + " ");
                 } else {
-                    System.out.println(chessmen.getCharValue());
+                    System.out.print(chessmen.getCharValue() + " ");
                 }
             }
             System.out.println(Board.WIDTH - i);

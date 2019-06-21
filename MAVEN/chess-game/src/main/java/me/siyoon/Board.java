@@ -33,6 +33,15 @@ public enum Board {
         this.chessmen = chessmen;
     }
 
+    public boolean moveChessmen(Board to) {
+        if (this.chessmen.canBeMoveTo(to)) {
+            to.setChessmen(this.chessmen);
+            this.chessmen = null;
+        }
+
+        return false;
+    }
+
     public static Board getBoardByIndex(final int i, final int j) {
         final char c = (char)('a' + j);
         final int n = WIDTH - i;

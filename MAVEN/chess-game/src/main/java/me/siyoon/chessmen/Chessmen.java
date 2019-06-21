@@ -9,6 +9,6 @@ public abstract class Chessmen {
         this.color = color;
     }
 
-    public abstract boolean moveTo(Board to);
+    public abstract boolean canBeMoveTo(Board to);
     public abstract char getCharValue();
 }

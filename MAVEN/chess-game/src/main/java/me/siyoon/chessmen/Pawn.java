@@ -10,8 +10,8 @@ public class Pawn extends Chessmen {
     }
 
     @Override
-    public boolean moveTo(Board to) {
-        return false;
+    public boolean canBeMoveTo(Board to) {
+        return true;
     }
 
     @Override

@@ -21,5 +21,6 @@ public class ConsoleView {
         for (int i = 0; i < Board.WIDTH; i++) {
             System.out.print((char)('a' + i) + " ");
         }
+        System.out.println();
     }
 }

@@ -3,7 +3,7 @@ package me.siyoon.chessman.movablerange;
 import me.siyoon.Board;
 
 public class Down extends MovableRange {
-    private int distance;
+    private final int distance;
 
     public Down() {
         distance = Board.HEIGHT;

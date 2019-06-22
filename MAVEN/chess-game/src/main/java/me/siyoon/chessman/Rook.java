@@ -3,8 +3,11 @@ package me.siyoon.chessman;
 import me.siyoon.Board;
 import me.siyoon.chessman.movablerange.*;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 /**
  * Rook(룩)의 행마 방식

@@ -32,10 +32,6 @@ public enum Board {
         return Board.getBoardByIndex(i, j).getChessman();
     }
 
-    public Coordinate getCoordinate() {
-        return coordinate;
-    }
-
     public boolean shiftChessmen(Board to) {
         if (chessman == null) {
             return false;
@@ -70,16 +66,16 @@ public enum Board {
         private int i;
         private int j;
 
-        public Coordinate(final int i, final int j) {
+        private Coordinate(final int i, final int j) {
             this.i = i;
             this.j = j;
         }
 
-        public int getI() {
+        private int getI() {
             return i;
         }
 
-        public int getJ() {
+        private int getJ() {
             return j;
         }
     }

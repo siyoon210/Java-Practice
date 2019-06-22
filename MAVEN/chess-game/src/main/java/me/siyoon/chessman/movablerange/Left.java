@@ -3,10 +3,10 @@ package me.siyoon.chessman.movablerange;
 import me.siyoon.Board;
 
 public class Left extends MovableRange {
-    private int distance;
+    private final int distance;
 
     public Left() {
-        distance = Board.HEIGHT;
+        distance = Board.WIDTH;
     }
 
     @Override

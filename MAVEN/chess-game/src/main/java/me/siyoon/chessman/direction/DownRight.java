@@ -2,7 +2,7 @@ package me.siyoon.chessman.direction;
 
 import me.siyoon.Board;
 
-public class DownRight implements MovableDirection {
+public class DownRight implements Direction {
     private final static DownRight instance = new DownRight();
     private final static DownRight instanceMaxDistanceOne = new DownRight(1);
     private final int maxDistance;

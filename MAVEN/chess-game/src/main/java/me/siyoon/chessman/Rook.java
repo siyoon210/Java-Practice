@@ -11,7 +11,7 @@ import java.util.Set;
  * 룩은 상하좌우 방향으로, 거리 제한 없이 움직일 수 있다. (다른 말을 뛰어넘을 순 없다.)
  */
 public class Rook extends Chessman {
-    private final Set<MovableDirection> movableDirections = new HashSet<>();
+    private final Set<Direction> movableDirections = new HashSet<>();
 
     public Rook(final Color color) {
         super(color);

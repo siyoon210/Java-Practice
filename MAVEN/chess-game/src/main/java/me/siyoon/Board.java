@@ -46,7 +46,7 @@ public enum Board {
     }
 
     private boolean isSameColor(final Board to) {
-        return to.getChessman().getColor().equals(chessman.getColor());
+        return (to != null) && (to.getChessman().getColor() == chessman.getColor());
     }
 
     public int getIndexI() {

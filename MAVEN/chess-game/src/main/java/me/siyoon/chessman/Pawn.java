@@ -1,9 +1,10 @@
 package me.siyoon.chessman;
 
 import me.siyoon.Board;
-import me.siyoon.chessman.direction.Down;
-import me.siyoon.chessman.direction.MovableDirection;
-import me.siyoon.chessman.direction.Up;
+import me.siyoon.chessman.direction.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Pawn(폰)의 행마 방식
@@ -14,22 +15,27 @@ import me.siyoon.chessman.direction.Up;
  */
 public class Pawn extends Chessman {
     private boolean hasBeenMoved;
-    private MovableDirection movableDirection;
+    private Direction movableDirection;
+    private final Set<Direction> attackableDirections = new HashSet<>();
 
     public Pawn(final Color color) {
         super(color);
         hasBeenMoved = false;
 
-        setMovableDirections(color);
+        setDirections(color);
     }
 
-    private void setMovableDirections(final Color color) {
+    private void setDirections(final Color color) {
         switch (color) {
             case BLACK:
                 movableDirection = Down.getInstance(1);
+                attackableDirections.add(DownLeft.getInstance(1));
+                attackableDirections.add(DownRight.getInstance(1));
                 break;
             case WHITE:
                 movableDirection = Up.getInstance(1);
+                attackableDirections.add(UpLeft.getInstance(1));
+                attackableDirections.add(UpRight.getInstance(1));
                 break;
             default:
                 throw new RuntimeException("Color 값이 이상하다.");
@@ -38,10 +44,22 @@ public class Pawn extends Chessman {
 
     @Override
     public boolean canBeMoveTo(final Board from, final Board to) {
+        if (isCapturingMovement(from, to)) {
+            return to.getChessman().getColor() != color;
+        }
+
         if (hasBeenMoved) {
             return movableDirection.isValidMovement(from, to);
         }
 
+        return firstMovementCase(from, to);
+    }
+
+    private boolean isCapturingMovement(final Board from, final Board to) {
+        return attackableDirections.stream().anyMatch(d -> d.isValidMovement(from, to));
+    }
+
+    private boolean firstMovementCase(final Board from, final Board to) {
         switch (color) {
             case BLACK:
                 if (Down.getInstance(2).isValidMovement(from, to)) {

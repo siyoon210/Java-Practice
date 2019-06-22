@@ -17,8 +17,8 @@ public enum Board {
     private final Coordinate coordinate;
     private Chessmen chessmen;
 
-    Board(final int indexI, final int indexJ) {
-        coordinate = new Coordinate(indexI, indexJ);
+    Board(final int i, final int j) {
+        coordinate = new Coordinate(i, j);
     }
 
     public Coordinate getCoordinate() {
@@ -33,10 +33,10 @@ public enum Board {
         this.chessmen = chessmen;
     }
 
-    public boolean moveChessmen(Board to) {
-        if (this.chessmen.canBeMoveTo(to)) {
-            to.setChessmen(this.chessmen);
-            this.chessmen = null;
+    public boolean shiftChessmen(Board to) {
+        if (chessmen.canBeMoveTo(this, to)) {
+            to.setChessmen(chessmen);
+            chessmen = null;
         }
 
         return false;
@@ -54,7 +54,7 @@ public enum Board {
     }
 
 
-    static class Coordinate{
+    public static class Coordinate{
         private int i;
         private int j;
 

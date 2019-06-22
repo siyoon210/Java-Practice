@@ -10,7 +10,7 @@ public class Knight extends Chessmen {
     }
 
     @Override
-    public boolean canBeMoveTo(Board to) {
+    public boolean canBeMoveTo(Board from, Board to) {
         return true;
     }
 

@@ -40,7 +40,7 @@ public class ChessGame {
                 try {
                     final Board from = Board.valueOf(input[1]);
                     final Board to = Board.valueOf(input[2]);
-                    from.moveChessmen(to);
+                    from.shiftChessmen(to);
                     return;
                 } catch (IllegalArgumentException e) {
                     System.out.println("입력이 잘못 되었습니다.");

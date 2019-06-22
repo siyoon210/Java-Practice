@@ -2,16 +2,36 @@ package me.siyoon.chessmen;
 
 import me.siyoon.Board;
 
+/**
+ * Pawn(폰)의 행마 방식
+ * 1. 폰은 앞쪽으로만 1칸씩 전진 할 수 있다. (검정은 보드 판 기준 아래로, 하양은 위로)
+ * 2. 한번도 움직이지 않은 폰은 맨 처음에 2칸까지 전진 할 수 있다. (뛰어 넘을 수 없다.)
+ * 3. 전진하는 방향으로 대각선에 위치한 말만을 잡을 수 있다.
+ * 4. 특수규칙 (앙파상, 승급)은 일단 제외한다.
+ */
 public class Pawn extends Chessmen {
     private final char charValue = 'p';
 
-    public Pawn(Color color) {
+    public Pawn(final Color color) {
         super(color);
     }
 
     @Override
-    public boolean canBeMoveTo(Board to) {
-        return true;
+    public boolean canBeMoveTo(final Board from, final Board to) {
+        final Board.Coordinate fromCoordinate = from.getCoordinate();
+        final Board.Coordinate toCoordinate = to.getCoordinate();
+
+        final int gapI = fromCoordinate.getI() - toCoordinate.getI();
+        final int gapJ = fromCoordinate.getJ() - toCoordinate.getJ();
+
+        switch (super.color) {
+            case BLACK:
+                return gapI == -1 && gapJ == 0;
+            case WHITE:
+                return gapI == 1 && gapJ == 0;
+            default:
+                throw new RuntimeException("Color 값이 이상하다. 이런건 존재할 수 없어!");
+        }
     }
 
     @Override

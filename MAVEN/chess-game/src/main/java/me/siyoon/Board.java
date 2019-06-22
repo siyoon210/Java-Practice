@@ -21,27 +21,6 @@ public enum Board {
         coordinate = new Coordinate(i, j);
     }
 
-    public Coordinate getCoordinate() {
-        return coordinate;
-    }
-
-    public Chessmen getChessmen() {
-        return chessmen;
-    }
-
-    public void setChessmen(final Chessmen chessmen) {
-        this.chessmen = chessmen;
-    }
-
-    public boolean shiftChessmen(Board to) {
-        if (chessmen.canBeMoveTo(this, to)) {
-            to.setChessmen(chessmen);
-            chessmen = null;
-        }
-
-        return false;
-    }
-
     public static Board getBoardByIndex(final int i, final int j) {
         final char c = (char)('a' + j);
         final int n = WIDTH - i;
@@ -53,6 +32,39 @@ public enum Board {
         return Board.getBoardByIndex(i, j).getChessmen();
     }
 
+    public Coordinate getCoordinate() {
+        return coordinate;
+    }
+
+    public boolean shiftChessmen(Board to) {
+        if (chessmen == null) {
+            return false;
+        }
+
+        if (chessmen.canBeMoveTo(this, to)) {
+            to.setChessmen(chessmen);
+            chessmen = null;
+            return true;
+        }
+
+        return false;
+    }
+
+    public int getIndexI() {
+        return coordinate.getI();
+    }
+
+    public int getIndexJ() {
+        return coordinate.getJ();
+    }
+
+    public Chessmen getChessmen() {
+        return chessmen;
+    }
+
+    public void setChessmen(final Chessmen chessmen) {
+        this.chessmen = chessmen;
+    }
 
     public static class Coordinate{
         private int i;

@@ -1,6 +1,9 @@
 package me.siyoon.chessmen;
 
 import me.siyoon.Board;
+import me.siyoon.chessmen.movehelper.Down;
+import me.siyoon.chessmen.movehelper.MovableRange;
+import me.siyoon.chessmen.movehelper.Up;
 
 /**
  * Pawn(폰)의 행마 방식
@@ -10,51 +13,54 @@ import me.siyoon.Board;
  * 4. 특수규칙 (앙파상, 승급)은 일단 제외한다.
  */
 public class Pawn extends Chessmen {
+    private Color color;
     private final char charValue = 'p';
     private boolean hasBeenMoved;
+    private MovableRange movableRange;
 
     public Pawn(final Color color) {
-        super(color);
+        this.color = color;
         hasBeenMoved = false;
+
+        switch (color) {
+            case BLACK:
+                movableRange = new Down(1);
+                break;
+            case WHITE:
+                movableRange = new Up(1);
+                break;
+            default:
+                throw new RuntimeException("Color 값이 이상하다.");
+        }
     }
 
     @Override
     public boolean canBeMoveTo(final Board from, final Board to) {
-        final Board.Coordinate fromCoordinate = from.getCoordinate();
-        final Board.Coordinate toCoordinate = to.getCoordinate();
+        if (hasBeenMoved) {
+            return movableRange.isInRange(from, to);
+        }
 
-        final int gapI = fromCoordinate.getI() - toCoordinate.getI();
-        final int gapJ = fromCoordinate.getJ() - toCoordinate.getJ();
-
-        switch (super.color) {
+        switch (color) {
             case BLACK:
-                if (hasBeenMoved) {
-                    return gapI == -1 && gapJ == 0;
-                }
-
-                if ((gapI == -1 || gapI == -2) && gapJ == 0) {
+                if (new Down(2).isInRange(from, to)) {
                     hasBeenMoved = true;
                     return true;
                 }
                 return false;
             case WHITE:
-                if (hasBeenMoved) {
-                    return gapI == 1 && gapJ == 0;
-                }
-
-                if ((gapI == 1 || gapI == 2) && gapJ == 0) {
+                if (new Up(2).isInRange(from, to)) {
                     hasBeenMoved = true;
                     return true;
                 }
                 return false;
             default:
-                throw new RuntimeException("Color 값이 이상하다. 이런건 존재할 수 없어!");
+                throw new RuntimeException("Color 값이 이상하다.");
         }
     }
 
     @Override
     public char getCharValue() {
-        if (super.color == Color.BLACK) {
+        if (color == Color.BLACK) {
             return Character.toUpperCase(charValue);
         }
         return charValue;

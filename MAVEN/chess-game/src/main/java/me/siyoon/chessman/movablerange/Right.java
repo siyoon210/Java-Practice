@@ -2,15 +2,11 @@ package me.siyoon.chessman.movablerange;
 
 import me.siyoon.Board;
 
-public class Down extends MovableRange {
+public class Right extends MovableRange {
     private int distance;
 
-    public Down() {
+    public Right() {
         distance = Board.HEIGHT;
-    }
-
-    public Down(final int distance) {
-        this.distance = distance;
     }
 
     @Override
@@ -18,6 +14,6 @@ public class Down extends MovableRange {
         final int gapI = from.getIndexI() - to.getIndexI();
         final int gapJ = from.getIndexJ() - to.getIndexJ();
 
-        return (gapI >= -distance && gapI <= -1) && gapJ == 0;
+        return gapI == 0 && (gapJ >= 1 && gapJ <= distance);
     }
 }

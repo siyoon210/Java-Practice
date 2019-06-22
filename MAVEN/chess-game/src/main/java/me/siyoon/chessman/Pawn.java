@@ -22,6 +22,10 @@ public class Pawn extends Chessman {
         this.color = color;
         hasBeenMoved = false;
 
+        setMovableRanges(color);
+    }
+
+    private void setMovableRanges(final Color color) {
         switch (color) {
             case BLACK:
                 movableRange = new Down(1);

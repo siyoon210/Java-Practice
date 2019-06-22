@@ -1,6 +1,6 @@
 package me.siyoon;
 
-import me.siyoon.chessmen.Chessmen;
+import me.siyoon.chessman.Chessman;
 
 public enum Board {
     a8(0,0), b8(0,1), c8(0,2), d8(0,3), e8(0,4), f8(0,5), g8(0,6), h8(0,7),
@@ -15,7 +15,7 @@ public enum Board {
     public final static int WIDTH = 8;
     public final static int HEIGHT = 8;
     private final Coordinate coordinate;
-    private Chessmen chessmen;
+    private Chessman chessman;
 
     Board(final int i, final int j) {
         coordinate = new Coordinate(i, j);
@@ -28,8 +28,8 @@ public enum Board {
         return Board.valueOf(c + String.valueOf(n));
     }
 
-    public static Chessmen getChessmenByIndex(final int i, final int j) {
-        return Board.getBoardByIndex(i, j).getChessmen();
+    public static Chessman getChessmenByIndex(final int i, final int j) {
+        return Board.getBoardByIndex(i, j).getChessman();
     }
 
     public Coordinate getCoordinate() {
@@ -37,13 +37,13 @@ public enum Board {
     }
 
     public boolean shiftChessmen(Board to) {
-        if (chessmen == null) {
+        if (chessman == null) {
             return false;
         }
 
-        if (chessmen.canBeMoveTo(this, to)) {
-            to.setChessmen(chessmen);
-            chessmen = null;
+        if (chessman.canBeMoveTo(this, to)) {
+            to.setChessman(chessman);
+            chessman = null;
             return true;
         }
 
@@ -58,12 +58,12 @@ public enum Board {
         return coordinate.getJ();
     }
 
-    public Chessmen getChessmen() {
-        return chessmen;
+    public Chessman getChessman() {
+        return chessman;
     }
 
-    public void setChessmen(final Chessmen chessmen) {
-        this.chessmen = chessmen;
+    public void setChessman(final Chessman chessman) {
+        this.chessman = chessman;
     }
 
     public static class Coordinate{

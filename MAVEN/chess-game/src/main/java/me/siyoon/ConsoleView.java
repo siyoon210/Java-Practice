@@ -1,6 +1,6 @@
 package me.siyoon;
 
-import me.siyoon.chessmen.Chessmen;
+import me.siyoon.chessman.Chessman;
 
 public class ConsoleView {
     private static final char EMPTY_COORDINATE_VALUE = '*';
@@ -8,11 +8,11 @@ public class ConsoleView {
     public void printBoard() {
         for (int i = 0; i < Board.WIDTH; i++) {
             for (int j = 0; j < Board.HEIGHT; j++) {
-                final Chessmen chessmen = Board.getChessmenByIndex(i, j);
-                if (chessmen == null) {
+                final Chessman chessman = Board.getChessmenByIndex(i, j);
+                if (chessman == null) {
                     System.out.print(EMPTY_COORDINATE_VALUE + " ");
                 } else {
-                    System.out.print(chessmen.getCharValue() + " ");
+                    System.out.print(chessman.getCharValue() + " ");
                 }
             }
             System.out.println(Board.WIDTH - i);

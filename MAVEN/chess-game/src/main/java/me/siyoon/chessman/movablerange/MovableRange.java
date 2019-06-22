@@ -1,4 +1,4 @@
-package me.siyoon.chessmen.movehelper;
+package me.siyoon.chessman.movablerange;
 
 import me.siyoon.Board;
 

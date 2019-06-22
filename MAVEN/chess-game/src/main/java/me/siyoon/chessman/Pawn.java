@@ -1,9 +1,9 @@
-package me.siyoon.chessmen;
+package me.siyoon.chessman;
 
 import me.siyoon.Board;
-import me.siyoon.chessmen.movehelper.Down;
-import me.siyoon.chessmen.movehelper.MovableRange;
-import me.siyoon.chessmen.movehelper.Up;
+import me.siyoon.chessman.movablerange.Down;
+import me.siyoon.chessman.movablerange.MovableRange;
+import me.siyoon.chessman.movablerange.Up;
 
 /**
  * Pawn(폰)의 행마 방식
@@ -12,7 +12,7 @@ import me.siyoon.chessmen.movehelper.Up;
  * 3. 전진하는 방향으로 대각선에 위치한 말만을 잡을 수 있다.
  * 4. 특수규칙 (앙파상, 승급)은 일단 제외한다.
  */
-public class Pawn extends Chessmen {
+public class Pawn extends Chessman {
     private Color color;
     private final char charValue = 'p';
     private boolean hasBeenMoved;

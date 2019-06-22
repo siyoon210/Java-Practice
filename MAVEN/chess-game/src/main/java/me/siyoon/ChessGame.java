@@ -1,7 +1,7 @@
 package me.siyoon;
 
-import me.siyoon.chessmen.Color;
-import me.siyoon.chessmen.Pawn;
+import me.siyoon.chessman.Color;
+import me.siyoon.chessman.Pawn;
 
 public class ChessGame {
     private ConsoleView consoleView;
@@ -13,15 +13,15 @@ public class ChessGame {
     }
 
     public void initBoard() {
-        Board.a8.setChessmen(new Pawn(Color.BLACK));
-        Board.b8.setChessmen(new Pawn(Color.BLACK));
-        Board.c8.setChessmen(new Pawn(Color.BLACK));
-        Board.d8.setChessmen(new Pawn(Color.BLACK));
+        Board.a8.setChessman(new Pawn(Color.BLACK));
+        Board.b8.setChessman(new Pawn(Color.BLACK));
+        Board.c8.setChessman(new Pawn(Color.BLACK));
+        Board.d8.setChessman(new Pawn(Color.BLACK));
 
-        Board.a1.setChessmen(new Pawn(Color.WHITE));
-        Board.b1.setChessmen(new Pawn(Color.WHITE));
-        Board.c1.setChessmen(new Pawn(Color.WHITE));
-        Board.d1.setChessmen(new Pawn(Color.WHITE));
+        Board.a1.setChessman(new Pawn(Color.WHITE));
+        Board.b1.setChessman(new Pawn(Color.WHITE));
+        Board.c1.setChessman(new Pawn(Color.WHITE));
+        Board.d1.setChessman(new Pawn(Color.WHITE));
     }
 
     public void run() {

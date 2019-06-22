@@ -11,6 +11,7 @@ public class Up implements MovableDirection {
     private Up() {
         maxDistance = Board.HEIGHT - 1;
     }
+
     private Up(final int maxDistance) {
         this.maxDistance = maxDistance;
     }
@@ -19,7 +20,7 @@ public class Up implements MovableDirection {
         return instance;
     }
 
-    public static Up getInstance(int maxDistance) {
+    public static Up getInstance(final int maxDistance) {
         if (maxDistance == 1) {
             return instanceMaxDistanceOne;
         } else if (maxDistance == 2) {

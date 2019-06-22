@@ -20,7 +20,7 @@ public class Down implements MovableDirection {
         return instance;
     }
 
-    public static Down getInstance(int maxDistance) {
+    public static Down getInstance(final int maxDistance) {
         if (maxDistance == 1) {
             return instanceMaxDistanceOne;
         } else if (maxDistance == 2) {

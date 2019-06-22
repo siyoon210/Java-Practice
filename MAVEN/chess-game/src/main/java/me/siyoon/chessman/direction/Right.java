@@ -4,14 +4,27 @@ import me.siyoon.Board;
 
 public class Right implements MovableDirection {
     private final static Right instance = new Right();
+    private final static Right instanceMaxDistanceOne = new Right(1);
     private final int maxDistance;
 
     private Right() {
         maxDistance = Board.WIDTH - 1;
     }
 
+    private Right(final int maxDistance) {
+        this.maxDistance = maxDistance;
+    }
+
     public static Right getInstance() {
         return instance;
+    }
+
+    public static Right getInstance(final int maxDistance) {
+        if (maxDistance == 1) {
+            return instanceMaxDistanceOne;
+        }
+
+        throw new RuntimeException("Right의 최대 거리는 1 혹은 제한 없음만 가능합니다.");
     }
 
     @Override

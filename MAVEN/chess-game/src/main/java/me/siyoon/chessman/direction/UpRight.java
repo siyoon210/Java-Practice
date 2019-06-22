@@ -4,14 +4,27 @@ import me.siyoon.Board;
 
 public class UpRight implements MovableDirection {
     private final static UpRight instance = new UpRight();
+    private final static UpRight instanceMaxDistanceOne = new UpRight();
     private final int maxDistance;
 
     private UpRight() {
         maxDistance = Board.HEIGHT - 1;
     }
 
+    private UpRight(final int maxDistance) {
+        this.maxDistance = maxDistance;
+    }
+
     public static UpRight getInstance() {
         return instance;
+    }
+
+    public static UpRight getInstance(final int maxDistance) {
+        if (maxDistance == 1) {
+            return instanceMaxDistanceOne;
+        }
+
+        throw new RuntimeException("UpLeft의 최대 거리는 1 혹은 제한 없음만 가능합니다.");
     }
 
     @Override

@@ -1,9 +1,9 @@
 package me.siyoon.chessman;
 
 import me.siyoon.Board;
-import me.siyoon.chessman.movablerange.Down;
-import me.siyoon.chessman.movablerange.MovableRange;
-import me.siyoon.chessman.movablerange.Up;
+import me.siyoon.chessman.direction.Down;
+import me.siyoon.chessman.direction.MovableDirection;
+import me.siyoon.chessman.direction.Up;
 
 /**
  * Pawn(폰)의 행마 방식
@@ -16,22 +16,22 @@ public class Pawn extends Chessman {
     private Color color;
     private final char charValue = 'p';
     private boolean hasBeenMoved;
-    private MovableRange movableRange;
+    private MovableDirection movableDirection;
 
     public Pawn(final Color color) {
         this.color = color;
         hasBeenMoved = false;
 
-        setMovableRanges(color);
+        setMovableDirections(color);
     }
 
-    private void setMovableRanges(final Color color) {
+    private void setMovableDirections(final Color color) {
         switch (color) {
             case BLACK:
-                movableRange = new Down(1);
+                movableDirection = new Down(1);
                 break;
             case WHITE:
-                movableRange = new Up(1);
+                movableDirection = new Up(1);
                 break;
             default:
                 throw new RuntimeException("Color 값이 이상하다.");
@@ -41,18 +41,18 @@ public class Pawn extends Chessman {
     @Override
     public boolean canBeMoveTo(final Board from, final Board to) {
         if (hasBeenMoved) {
-            return movableRange.isInRange(from, to);
+            return movableDirection.isValidMovement(from, to);
         }
 
         switch (color) {
             case BLACK:
-                if (new Down(2).isInRange(from, to)) {
+                if (new Down(2).isValidMovement(from, to)) {
                     hasBeenMoved = true;
                     return true;
                 }
                 return false;
             case WHITE:
-                if (new Up(2).isInRange(from, to)) {
+                if (new Up(2).isValidMovement(from, to)) {
                     hasBeenMoved = true;
                     return true;
                 }

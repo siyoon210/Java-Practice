@@ -1,13 +1,10 @@
 package me.siyoon.chessman;
 
 import me.siyoon.Board;
-import me.siyoon.chessman.movablerange.*;
+import me.siyoon.chessman.direction.*;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 /**
  * Rook(룩)의 행마 방식
@@ -16,24 +13,24 @@ import java.util.stream.Collectors;
 public class Rook extends Chessman {
     private Color color;
     private final char charValue = 'r';
-    private Set<MovableRange> movableRanges;
+    private Set<MovableDirection> movableDirections;
 
     public Rook(final Color color) {
         this.color = color;
-        setMovableRanges();
+        setMovableDirections();
     }
 
-    private void setMovableRanges() {
-        movableRanges = new HashSet<>();
-        movableRanges.add(new Up());
-        movableRanges.add(new Down());
-        movableRanges.add(new Left());
-        movableRanges.add(new Right());
+    private void setMovableDirections() {
+        movableDirections = new HashSet<>();
+        movableDirections.add(new Up());
+        movableDirections.add(new Down());
+        movableDirections.add(new Left());
+        movableDirections.add(new Right());
     }
 
     @Override
     public boolean canBeMoveTo(final Board from, final Board to) {
-        return movableRanges.stream().anyMatch(m -> m.isInRange(from, to));
+        return movableDirections.stream().anyMatch(m -> m.isValidMovement(from, to));
     }
 
     @Override

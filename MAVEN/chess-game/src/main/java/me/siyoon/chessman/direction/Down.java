@@ -1,8 +1,8 @@
-package me.siyoon.chessman.movablerange;
+package me.siyoon.chessman.direction;
 
 import me.siyoon.Board;
 
-public class Down extends MovableRange {
+public class Down implements MovableDirection {
     private final int distance;
 
     public Down() {
@@ -14,7 +14,7 @@ public class Down extends MovableRange {
     }
 
     @Override
-    public boolean isInRange(final Board from, final Board to) {
+    public boolean isValidMovement(final Board from, final Board to) {
         final int gapI = from.getIndexI() - to.getIndexI();
         final int gapJ = from.getIndexJ() - to.getIndexJ();
 

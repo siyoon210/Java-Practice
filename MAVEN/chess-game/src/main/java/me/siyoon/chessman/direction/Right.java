@@ -3,10 +3,10 @@ package me.siyoon.chessman.direction;
 import me.siyoon.Board;
 
 public class Right implements MovableDirection {
-    private final int distance;
+    private final int maxDistance;
 
     public Right() {
-        distance = Board.WIDTH;
+        maxDistance = Board.WIDTH - 1;
     }
 
     @Override
@@ -18,11 +18,11 @@ public class Right implements MovableDirection {
         final int gapI = from.getIndexI() - to.getIndexI();
         final int gapJ = from.getIndexJ() - to.getIndexJ();
 
-        return gapI == 0 && (gapJ >= 1 && gapJ < distance);
+        return gapI == 0 && (gapJ >= -maxDistance && gapJ <= -1);
     }
 
     private boolean hasOtherChessmanOnPath(final Board from, final Board to) {
-        for (int j = from.getIndexJ(); j < to.getIndexJ(); j++) {
+        for (int j = from.getIndexJ() + 1; j < to.getIndexJ(); j++) {
             if (Board.getChessmenByIndex(from.getIndexI(), j) != null) return true;
         }
 

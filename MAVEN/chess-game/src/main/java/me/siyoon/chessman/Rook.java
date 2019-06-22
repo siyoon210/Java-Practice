@@ -22,7 +22,7 @@ public class Rook extends Chessman {
 
     private void setMovableDirections() {
         movableDirections = new HashSet<>();
-        movableDirections.add(new Up());
+        movableDirections.add(new Up()); //TODO 똑같은 방향을 매번 new 로 만드느는거 비효율 적인거 같다.
         movableDirections.add(new Down());
         movableDirections.add(new Left());
         movableDirections.add(new Right());
@@ -30,7 +30,14 @@ public class Rook extends Chessman {
 
     @Override
     public boolean canBeMoveTo(final Board from, final Board to) {
-        return movableDirections.stream().anyMatch(m -> m.isValidMovement(from, to));
+//        return movableDirections.stream().anyMatch(m -> m.isValidMovement(from, to));
+        for (final MovableDirection movableDirection : movableDirections) {
+            if (movableDirection.isValidMovement(from, to)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     @Override

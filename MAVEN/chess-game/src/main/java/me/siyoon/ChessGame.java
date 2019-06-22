@@ -1,6 +1,6 @@
 package me.siyoon;
 
-import me.siyoon.chessman.Color;
+import me.siyoon.chessman.Chessman;
 import me.siyoon.chessman.Pawn;
 import me.siyoon.chessman.Rook;
 
@@ -14,30 +14,30 @@ public class ChessGame {
     }
 
     public void initBoard() {
-        Board.a8.setChessman(new Rook(Color.BLACK));
-        Board.h8.setChessman(new Rook(Color.BLACK));
+        Board.a8.setChessman(new Rook(Chessman.Color.BLACK));
+        Board.h8.setChessman(new Rook(Chessman.Color.BLACK));
 
-        Board.a7.setChessman(new Pawn(Color.BLACK));
-        Board.b7.setChessman(new Pawn(Color.BLACK));
-        Board.c7.setChessman(new Pawn(Color.BLACK));
-        Board.d7.setChessman(new Pawn(Color.BLACK));
-        Board.e7.setChessman(new Pawn(Color.BLACK));
-        Board.f7.setChessman(new Pawn(Color.BLACK));
-        Board.g7.setChessman(new Pawn(Color.BLACK));
-        Board.h7.setChessman(new Pawn(Color.BLACK));
+        Board.a7.setChessman(new Pawn(Chessman.Color.BLACK));
+        Board.b7.setChessman(new Pawn(Chessman.Color.BLACK));
+        Board.c7.setChessman(new Pawn(Chessman.Color.BLACK));
+        Board.d7.setChessman(new Pawn(Chessman.Color.BLACK));
+        Board.e7.setChessman(new Pawn(Chessman.Color.BLACK));
+        Board.f7.setChessman(new Pawn(Chessman.Color.BLACK));
+        Board.g7.setChessman(new Pawn(Chessman.Color.BLACK));
+        Board.h7.setChessman(new Pawn(Chessman.Color.BLACK));
 
 
-        Board.a1.setChessman(new Rook(Color.WHITE));
-        Board.h1.setChessman(new Rook(Color.WHITE));
+        Board.a1.setChessman(new Rook(Chessman.Color.WHITE));
+        Board.h1.setChessman(new Rook(Chessman.Color.WHITE));
 
-        Board.a2.setChessman(new Pawn(Color.WHITE));
-        Board.b2.setChessman(new Pawn(Color.WHITE));
-        Board.c2.setChessman(new Pawn(Color.WHITE));
-        Board.d2.setChessman(new Pawn(Color.WHITE));
-        Board.e2.setChessman(new Pawn(Color.WHITE));
-        Board.f2.setChessman(new Pawn(Color.WHITE));
-        Board.g2.setChessman(new Pawn(Color.WHITE));
-        Board.h2.setChessman(new Pawn(Color.WHITE));
+        Board.a2.setChessman(new Pawn(Chessman.Color.WHITE));
+        Board.b2.setChessman(new Pawn(Chessman.Color.WHITE));
+        Board.c2.setChessman(new Pawn(Chessman.Color.WHITE));
+        Board.d2.setChessman(new Pawn(Chessman.Color.WHITE));
+        Board.e2.setChessman(new Pawn(Chessman.Color.WHITE));
+        Board.f2.setChessman(new Pawn(Chessman.Color.WHITE));
+        Board.g2.setChessman(new Pawn(Chessman.Color.WHITE));
+        Board.h2.setChessman(new Pawn(Chessman.Color.WHITE));
     }
 
     public void run() {

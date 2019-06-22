@@ -8,18 +8,16 @@ import me.siyoon.chessman.direction.Up;
 /**
  * Pawn(폰)의 행마 방식
  * 1. 폰은 앞쪽으로만 1칸씩 전진 할 수 있다. (검정은 보드 판 기준 아래로, 하양은 위로)
- * 2. 한번도 움직이지 않은 폰은 맨 처음에 2칸까지 전진 할 수 있다. (뛰어 넘을 수 없다.)
- * 3. 전진하는 방향으로 대각선에 위치한 말만을 잡을 수 있다.
+ * 2. 한번도 움직이지 않은 폰은 맨 처음에 2칸까지 전진 할 수 있다. (다른 말을 뛰어 넘을 순 없다.)
+ * 3. 전진하는 방향으로 한칸 대각선에 위치한 말만을 잡을 수 있다.
  * 4. 특수규칙 (앙파상, 승급)은 일단 제외한다.
  */
 public class Pawn extends Chessman {
-    private Color color;
-    private final char charValue = 'p';
     private boolean hasBeenMoved;
     private MovableDirection movableDirection;
 
     public Pawn(final Color color) {
-        this.color = color;
+        super(color);
         hasBeenMoved = false;
 
         setMovableDirections(color);
@@ -28,10 +26,10 @@ public class Pawn extends Chessman {
     private void setMovableDirections(final Color color) {
         switch (color) {
             case BLACK:
-                movableDirection = new Down(1);
+                movableDirection = Down.getInstance(1);
                 break;
             case WHITE:
-                movableDirection = new Up(1);
+                movableDirection = Up.getInstance(1);
                 break;
             default:
                 throw new RuntimeException("Color 값이 이상하다.");
@@ -46,13 +44,13 @@ public class Pawn extends Chessman {
 
         switch (color) {
             case BLACK:
-                if (new Down(2).isValidMovement(from, to)) {
+                if (Down.getInstance(2).isValidMovement(from, to)) {
                     hasBeenMoved = true;
                     return true;
                 }
                 return false;
             case WHITE:
-                if (new Up(2).isValidMovement(from, to)) {
+                if (Up.getInstance(2).isValidMovement(from, to)) {
                     hasBeenMoved = true;
                     return true;
                 }
@@ -64,6 +62,7 @@ public class Pawn extends Chessman {
 
     @Override
     public char getCharValue() {
+        final char charValue = 'p';
         if (color == Color.BLACK) {
             return Character.toUpperCase(charValue);
         }

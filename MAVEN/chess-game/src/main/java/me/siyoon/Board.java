@@ -38,12 +38,19 @@ public enum Board {
         }
 
         if (chessman.canBeMoveTo(this, to)) {
+            if (isSameColor(to)) {
+                return false;
+            }
             to.setChessman(chessman);
             chessman = null;
             return true;
         }
 
         return false;
+    }
+
+    private boolean isSameColor(final Board to) {
+        return to.getChessman().getColor().equals(chessman.getColor());
     }
 
     public int getIndexI() {

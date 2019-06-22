@@ -3,10 +3,15 @@ package me.siyoon.chessman.direction;
 import me.siyoon.Board;
 
 public class Right implements MovableDirection {
+    private final static Right instance = new Right();
     private final int maxDistance;
 
-    public Right() {
+    private Right() {
         maxDistance = Board.WIDTH - 1;
+    }
+
+    public static Right getInstance() {
+        return instance;
     }
 
     @Override

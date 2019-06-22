@@ -15,9 +15,10 @@ public class ConsoleView {
                     System.out.print(chessman.getCharValue() + " ");
                 }
             }
-            System.out.println(Board.WIDTH - i);
+            System.out.println("  " + (Board.WIDTH - i));
         }
 
+        System.out.println();
         for (int i = 0; i < Board.WIDTH; i++) {
             System.out.print((char)('a' + i) + " ");
         }

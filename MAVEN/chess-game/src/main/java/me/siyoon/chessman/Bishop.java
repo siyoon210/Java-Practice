@@ -32,7 +32,7 @@ public class Bishop extends Chessman {
 
     @Override
     public char getCharValue() {
-        final char charValue = 'r';
+        final char charValue = 'b';
         if (color == Color.BLACK) {
             return Character.toUpperCase(charValue);
         }

@@ -27,7 +27,7 @@ public class Knight extends Chessman {
 
     @Override
     public char getCharValue() {
-        final char charValue = 'r';
+        final char charValue = 'n';
         if (color == Color.BLACK) {
             return Character.toUpperCase(charValue);
         }

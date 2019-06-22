@@ -1,8 +1,6 @@
 package me.siyoon;
 
-import me.siyoon.chessman.Chessman;
-import me.siyoon.chessman.Pawn;
-import me.siyoon.chessman.Rook;
+import me.siyoon.chessman.*;
 
 public class ChessGame {
     private ConsoleView consoleView;
@@ -15,6 +13,12 @@ public class ChessGame {
 
     public void initBoard() {
         Board.a8.setChessman(new Rook(Chessman.Color.BLACK));
+        Board.b8.setChessman(new Knight(Chessman.Color.BLACK));
+        Board.c8.setChessman(new Bishop(Chessman.Color.BLACK));
+        Board.d8.setChessman(new Queen(Chessman.Color.BLACK));
+        Board.e8.setChessman(new King(Chessman.Color.BLACK));
+        Board.f8.setChessman(new Bishop(Chessman.Color.BLACK));
+        Board.g8.setChessman(new Knight(Chessman.Color.BLACK));
         Board.h8.setChessman(new Rook(Chessman.Color.BLACK));
 
         Board.a7.setChessman(new Pawn(Chessman.Color.BLACK));
@@ -27,9 +31,6 @@ public class ChessGame {
         Board.h7.setChessman(new Pawn(Chessman.Color.BLACK));
 
 
-        Board.a1.setChessman(new Rook(Chessman.Color.WHITE));
-        Board.h1.setChessman(new Rook(Chessman.Color.WHITE));
-
         Board.a2.setChessman(new Pawn(Chessman.Color.WHITE));
         Board.b2.setChessman(new Pawn(Chessman.Color.WHITE));
         Board.c2.setChessman(new Pawn(Chessman.Color.WHITE));
@@ -38,6 +39,15 @@ public class ChessGame {
         Board.f2.setChessman(new Pawn(Chessman.Color.WHITE));
         Board.g2.setChessman(new Pawn(Chessman.Color.WHITE));
         Board.h2.setChessman(new Pawn(Chessman.Color.WHITE));
+
+        Board.a1.setChessman(new Rook(Chessman.Color.WHITE));
+        Board.b1.setChessman(new Knight(Chessman.Color.WHITE));
+        Board.c1.setChessman(new Bishop(Chessman.Color.WHITE));
+        Board.d1.setChessman(new Queen(Chessman.Color.WHITE));
+        Board.e1.setChessman(new King(Chessman.Color.WHITE));
+        Board.f1.setChessman(new Bishop(Chessman.Color.WHITE));
+        Board.g1.setChessman(new Knight(Chessman.Color.WHITE));
+        Board.h1.setChessman(new Rook(Chessman.Color.WHITE));
     }
 
     public void run() {

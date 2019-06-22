@@ -32,7 +32,7 @@ public class King extends Chessman {
 
     @Override
     public char getCharValue() {
-        final char charValue = 'r';
+        final char charValue = 'k';
         if (color == Color.BLACK) {
             return Character.toUpperCase(charValue);
         }

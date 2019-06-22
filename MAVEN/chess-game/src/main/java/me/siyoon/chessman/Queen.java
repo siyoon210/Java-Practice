@@ -36,7 +36,7 @@ public class Queen extends Chessman {
 
     @Override
     public char getCharValue() {
-        final char charValue = 'r';
+        final char charValue = 'q';
         if (color == Color.BLACK) {
             return Character.toUpperCase(charValue);
         }

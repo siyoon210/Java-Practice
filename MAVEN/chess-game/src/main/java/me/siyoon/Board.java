@@ -32,7 +32,7 @@ public enum Board {
         return Board.getBoardByIndex(i, j).getChessman();
     }
 
-    public boolean shiftChessmen(Board to) {
+    public boolean shiftChessman(Board to) {
         if (chessman == null) return false;
         if (isSameColor(to)) return false;
 

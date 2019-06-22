@@ -66,7 +66,7 @@ public class ChessGame {
                 try {
                     final Board from = Board.valueOf(input[1]);
                     final Board to = Board.valueOf(input[2]);
-                    if (from.shiftChessmen(to)) {
+                    if (from.shiftChessman(to)) {
                         return;
                     }
                 } catch (IllegalArgumentException e) {

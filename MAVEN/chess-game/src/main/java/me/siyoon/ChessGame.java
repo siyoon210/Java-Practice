@@ -40,12 +40,14 @@ public class ChessGame {
                 try {
                     final Board from = Board.valueOf(input[1]);
                     final Board to = Board.valueOf(input[2]);
-                    from.shiftChessmen(to);
-                    return;
+                    if (from.shiftChessmen(to)) {
+                        return;
+                    }
                 } catch (IllegalArgumentException e) {
                     System.out.println("입력이 잘못 되었습니다.");
                 }
             }
+            System.out.println("입력이 잘못 되었습니다.");
         }
     }
 }

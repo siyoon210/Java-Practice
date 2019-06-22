@@ -11,9 +11,11 @@ import me.siyoon.Board;
  */
 public class Pawn extends Chessmen {
     private final char charValue = 'p';
+    private boolean hasBeenMoved;
 
     public Pawn(final Color color) {
         super(color);
+        hasBeenMoved = false;
     }
 
     @Override
@@ -26,9 +28,25 @@ public class Pawn extends Chessmen {
 
         switch (super.color) {
             case BLACK:
-                return gapI == -1 && gapJ == 0;
+                if (hasBeenMoved) {
+                    return gapI == -1 && gapJ == 0;
+                }
+
+                if ((gapI == -1 || gapI == -2) && gapJ == 0) {
+                    hasBeenMoved = true;
+                    return true;
+                }
+                return false;
             case WHITE:
-                return gapI == 1 && gapJ == 0;
+                if (hasBeenMoved) {
+                    return gapI == 1 && gapJ == 0;
+                }
+
+                if ((gapI == 1 || gapI == 2) && gapJ == 0) {
+                    hasBeenMoved = true;
+                    return true;
+                }
+                return false;
             default:
                 throw new RuntimeException("Color 값이 이상하다. 이런건 존재할 수 없어!");
         }

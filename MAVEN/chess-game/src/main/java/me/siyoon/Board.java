@@ -33,14 +33,10 @@ public enum Board {
     }
 
     public boolean shiftChessmen(Board to) {
-        if (chessman == null) {
-            return false;
-        }
+        if (chessman == null) return false;
+        if (isSameColor(to)) return false;
 
         if (chessman.canBeMoveTo(this, to)) {
-            if (isSameColor(to)) {
-                return false;
-            }
             to.setChessman(chessman);
             chessman = null;
             return true;

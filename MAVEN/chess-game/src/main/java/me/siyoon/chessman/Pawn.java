@@ -56,7 +56,7 @@ public class Pawn extends Chessman {
     }
 
     private boolean isCapturingMovement(final Board from, final Board to) {
-        return attackableDirections.stream().anyMatch(d -> d.isValidMovement(from, to));
+        return attackableDirections.stream().anyMatch(a -> a.isValidMovement(from, to));
     }
 
     private boolean firstMovementCase(final Board from, final Board to) {

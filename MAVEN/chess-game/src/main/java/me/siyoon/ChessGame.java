@@ -5,10 +5,12 @@ import me.siyoon.chessman.*;
 public class ChessGame {
     private ConsoleView consoleView;
     private ConsoleController controller;
+    private boolean whiteTurn;
 
     public ChessGame() {
         consoleView = new ConsoleView();
         controller = new ConsoleController();
+        whiteTurn = true;
     }
 
     public void initBoard() {
@@ -66,7 +68,17 @@ public class ChessGame {
                 try {
                     final Board from = Board.valueOf(input[1]);
                     final Board to = Board.valueOf(input[2]);
+
+                    if ((from.getChessman().getColor() == Chessman.Color.WHITE) && !whiteTurn) {
+                        System.out.println("현재는 검은색 말 턴입니다.");
+                        continue;
+                    } else if ((from.getChessman().getColor() == Chessman.Color.BLACK) && whiteTurn){
+                        System.out.println("현재는 하얀색 말 턴입니다.");
+                        continue;
+                    }
+
                     if (from.shiftChessman(to)) {
+                        whiteTurn = !whiteTurn;
                         return;
                     }
                 } catch (IllegalArgumentException e) {

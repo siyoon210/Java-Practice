@@ -8,7 +8,6 @@ public class Down implements Direction {
     private final static Down instanceMaxDistanceTwo = new Down(2);
     private final int maxDistance;
 
-
     private Down() {
         maxDistance = Board.HEIGHT - 1;
     }

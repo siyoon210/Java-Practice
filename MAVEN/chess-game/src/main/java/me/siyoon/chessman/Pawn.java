@@ -16,6 +16,7 @@ import java.util.Set;
 public class Pawn extends Chessman {
     private boolean hasBeenMoved;
     private Direction movableDirection;
+    private Set<Direction> movableDirectionsWhenFirstMovement;
     private final Set<Direction> attackableDirections = new HashSet<>();
 
     public Pawn(final Color color) {
@@ -29,14 +30,18 @@ public class Pawn extends Chessman {
         switch (color) {
             case BLACK:
                 movableDirection = Down.getInstance(1);
+                movableDirectionsWhenFirstMovement.add(DownLeft.getInstance(1));
+                movableDirectionsWhenFirstMovement.add(DownRight.getInstance(1));
                 attackableDirections.add(DownLeft.getInstance(1));
                 attackableDirections.add(DownRight.getInstance(1));
-                break;
+                return;
             case WHITE:
                 movableDirection = Up.getInstance(1);
+                movableDirectionsWhenFirstMovement.add(UpLeft.getInstance(1));
+                movableDirectionsWhenFirstMovement.add(UpRight.getInstance(1));
                 attackableDirections.add(UpLeft.getInstance(1));
                 attackableDirections.add(UpRight.getInstance(1));
-                break;
+                return;
             default:
                 throw new RuntimeException("Color 값이 이상하다.");
         }
@@ -49,7 +54,7 @@ public class Pawn extends Chessman {
         }
 
         if (hasBeenMoved) {
-            return movableDirection.isValidMovement(from, to);
+            movableDirection.isValidMovement(from, to);
         }
 
         return firstMovementCase(from, to);
@@ -60,22 +65,12 @@ public class Pawn extends Chessman {
     }
 
     private boolean firstMovementCase(final Board from, final Board to) {
-        switch (color) {
-            case BLACK:
-                if (Down.getInstance(2).isValidMovement(from, to)) {
-                    hasBeenMoved = true;
-                    return true;
-                }
-                return false;
-            case WHITE:
-                if (Up.getInstance(2).isValidMovement(from, to)) {
-                    hasBeenMoved = true;
-                    return true;
-                }
-                return false;
-            default:
-                throw new RuntimeException("Color 값이 이상하다.");
+        if (movableDirectionsWhenFirstMovement.stream().anyMatch(d -> d.isValidMovement(from, to))) {
+            hasBeenMoved = true;
+            return true;
         }
+
+        return false;
     }
 
     @Override

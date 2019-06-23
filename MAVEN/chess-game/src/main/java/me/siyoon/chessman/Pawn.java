@@ -46,10 +46,6 @@ public class Pawn extends Chessman {
 
     @Override
     public boolean canBeMoveTo(final Board from, final Board to) {
-        if (to.getChessman().getColor() == color) {
-            return false;
-        }
-
         if (isCapturingMovement(from, to)) {
             hasBeenMoved = true;
             return true;

@@ -16,7 +16,7 @@ import java.util.Set;
 public class Pawn extends Chessman {
     private boolean hasBeenMoved;
     private Direction movableDirection;
-    private Set<Direction> movableDirectionsWhenFirstMovement;
+    private Direction movableDirectionWhenFirstMovement;
     private final Set<Direction> attackableDirections = new HashSet<>();
 
     public Pawn(final Color color) {
@@ -30,15 +30,13 @@ public class Pawn extends Chessman {
         switch (color) {
             case BLACK:
                 movableDirection = Down.getInstance(1);
-                movableDirectionsWhenFirstMovement.add(DownLeft.getInstance(1));
-                movableDirectionsWhenFirstMovement.add(DownRight.getInstance(1));
+                movableDirectionWhenFirstMovement = Down.getInstance(2);
                 attackableDirections.add(DownLeft.getInstance(1));
                 attackableDirections.add(DownRight.getInstance(1));
                 return;
             case WHITE:
                 movableDirection = Up.getInstance(1);
-                movableDirectionsWhenFirstMovement.add(UpLeft.getInstance(1));
-                movableDirectionsWhenFirstMovement.add(UpRight.getInstance(1));
+                movableDirectionWhenFirstMovement = Up.getInstance(2);
                 attackableDirections.add(UpLeft.getInstance(1));
                 attackableDirections.add(UpRight.getInstance(1));
                 return;
@@ -50,24 +48,23 @@ public class Pawn extends Chessman {
     @Override
     public boolean canBeMoveTo(final Board from, final Board to) {
         if (isCapturingMovement(from, to)) {
-            return to.getChessman().getColor() != color;
+            return hasBeenMoved = true;
         }
 
         if (hasBeenMoved) {
-            movableDirection.isValidMovement(from, to);
+            return movableDirection.isValidMovement(from, to);
         }
 
         return firstMovementCase(from, to);
     }
 
     private boolean isCapturingMovement(final Board from, final Board to) {
-        return attackableDirections.stream().anyMatch(a -> a.isValidMovement(from, to));
+        return attackableDirections.stream().anyMatch(a -> a.isValidMovement(from, to)) && (to.getChessman().getColor() != color);
     }
 
     private boolean firstMovementCase(final Board from, final Board to) {
-        if (movableDirectionsWhenFirstMovement.stream().anyMatch(d -> d.isValidMovement(from, to))) {
-            hasBeenMoved = true;
-            return true;
+        if (movableDirectionWhenFirstMovement.isValidMovement(from, to)) {
+            return hasBeenMoved = true;
         }
 
         return false;

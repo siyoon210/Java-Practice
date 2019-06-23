@@ -16,7 +16,7 @@ public class Knight extends Chessman {
     private Direction movableDirection;
 
     public Knight(final Color color) {
-        super(color);
+        this.color = color;
         movableDirection = KnightDirection.getInstance();
     }
 

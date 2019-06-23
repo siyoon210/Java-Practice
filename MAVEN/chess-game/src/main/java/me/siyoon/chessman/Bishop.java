@@ -14,7 +14,7 @@ public class Bishop extends Chessman {
     private final Set<Direction> movableDirections = new HashSet<>();
 
     public Bishop(final Color color) {
-        super(color);
+        this.color = color;
         setMovableDirections();
     }
 

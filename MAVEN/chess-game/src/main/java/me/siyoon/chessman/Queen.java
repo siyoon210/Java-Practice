@@ -14,7 +14,7 @@ public class Queen extends Chessman {
     private final Set<Direction> movableDirections = new HashSet<>();
 
     public Queen(final Color color) {
-        super(color);
+        this.color = color;
         setMovableDirections();
     }
 

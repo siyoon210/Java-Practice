@@ -14,7 +14,7 @@ public class Rook extends Chessman {
     private final Set<Direction> movableDirections = new HashSet<>();
 
     public Rook(final Color color) {
-        super(color);
+        this.color = color;
         setMovableDirections();
     }
 

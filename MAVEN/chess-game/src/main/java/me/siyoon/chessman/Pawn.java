@@ -20,9 +20,8 @@ public class Pawn extends Chessman {
     private final Set<Direction> attackableDirections = new HashSet<>();
 
     public Pawn(final Color color) {
-        super(color);
+        this.color = color;
         hasBeenMoved = false;
-
         setDirections(color);
     }
 
@@ -48,23 +47,26 @@ public class Pawn extends Chessman {
     @Override
     public boolean canBeMoveTo(final Board from, final Board to) {
         if (isCapturingMovement(from, to)) {
-            return hasBeenMoved = true;
+            hasBeenMoved = true;
+            return true;
         }
 
-        if (hasBeenMoved) {
-            return movableDirection.isValidMovement(from, to);
-        }
-
-        return firstMovementCase(from, to);
+        return hasBeenMoved ? commonMovementCase(from, to) : firstMovementCase(from, to);
     }
 
     private boolean isCapturingMovement(final Board from, final Board to) {
-        return attackableDirections.stream().anyMatch(a -> a.isValidMovement(from, to)) && (to.getChessman().getColor() != color);
+        return attackableDirections.stream().anyMatch(a -> a.isValidMovement(from, to))
+                && (to.getChessman() != null && to.getChessman().getColor() != color);
+    }
+
+    private boolean commonMovementCase(final Board from, final Board to) {
+        return movableDirection.isValidMovement(from, to) && to.getChessman() == null;
     }
 
     private boolean firstMovementCase(final Board from, final Board to) {
-        if (movableDirectionWhenFirstMovement.isValidMovement(from, to)) {
-            return hasBeenMoved = true;
+        if (movableDirectionWhenFirstMovement.isValidMovement(from, to) && to.getChessman() == null) {
+            hasBeenMoved = true;
+            return true;
         }
 
         return false;
@@ -73,9 +75,6 @@ public class Pawn extends Chessman {
     @Override
     public char getCharValue() {
         final char charValue = 'p';
-        if (color == Color.BLACK) {
-            return Character.toUpperCase(charValue);
-        }
-        return charValue;
+        return color == Color.BLACK ? Character.toUpperCase(charValue) : charValue;
     }
 }

@@ -27,15 +27,18 @@ public class Rook extends Chessman {
 
     @Override
     public boolean canBeMoveTo(final Board from, final Board to) {
+        if (isCapturingSameColor(to)) return false;
+
         return movableDirections.stream().anyMatch(m -> m.isValidMovement(from, to));
+    }
+
+    private boolean isCapturingSameColor(final Board to) {
+        return (to.getChessman() != null) && (to.getChessman().getColor() == color);
     }
 
     @Override
     public char getCharValue() {
         final char charValue = 'r';
-        if (color == Color.BLACK) {
-            return Character.toUpperCase(charValue);
-        }
-        return charValue;
+        return color == Color.BLACK ? Character.toUpperCase(charValue) : charValue;
     }
 }

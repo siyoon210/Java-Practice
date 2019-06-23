@@ -34,7 +34,6 @@ public enum Board {
 
     public boolean shiftChessman(Board to) {
         if (chessman == null) return false;
-        if (isSameColor(to)) return false;
 
         if (chessman.canBeMoveTo(this, to)) {
             to.setChessman(chessman);
@@ -43,10 +42,6 @@ public enum Board {
         }
 
         return false;
-    }
-
-    private boolean isSameColor(final Board to) {
-        return (to.getChessman() != null) && (to.getChessman().getColor() == chessman.getColor());
     }
 
     public int getIndexI() {

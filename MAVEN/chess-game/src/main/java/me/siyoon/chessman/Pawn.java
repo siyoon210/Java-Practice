@@ -71,10 +71,4 @@ public class Pawn extends Chessman {
 
         return false;
     }
-
-    @Override
-    public char getCharValue() {
-        final char charValue = 'p';
-        return color == Color.BLACK ? Character.toUpperCase(charValue) : charValue;
-    }
 }

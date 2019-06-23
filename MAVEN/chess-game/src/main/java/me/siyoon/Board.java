@@ -45,11 +45,11 @@ public enum Board {
     }
 
     public int getIndexI() {
-        return coordinate.getI();
+        return coordinate.i;
     }
 
     public int getIndexJ() {
-        return coordinate.getJ();
+        return coordinate.j;
     }
 
     public Chessman getChessman() {
@@ -67,14 +67,6 @@ public enum Board {
         private Coordinate(final int i, final int j) {
             this.i = i;
             this.j = j;
-        }
-
-        private int getI() {
-            return i;
-        }
-
-        private int getJ() {
-            return j;
         }
     }
 }

@@ -72,7 +72,7 @@ public class ChessGame {
                     if ((from.getChessman().getColor() == Chessman.Color.WHITE) && !whiteTurn) {
                         System.out.println("현재는 검은색 말 턴입니다.");
                         continue;
-                    } else if ((from.getChessman().getColor() == Chessman.Color.BLACK) && whiteTurn){
+                    } else if ((from.getChessman().getColor() == Chessman.Color.BLACK) && whiteTurn) {
                         System.out.println("현재는 하얀색 말 턴입니다.");
                         continue;
                     }
@@ -84,8 +84,15 @@ public class ChessGame {
                 } catch (IllegalArgumentException e) {
                     System.out.println("입력이 잘못 되었습니다.");
                 }
+            } else if ("start".equals(input[0])) {
+                System.out.println("시작합니다.");
+            } else if ("end".equals(input[0])) {
+                System.out.println("종료합니다.");
+            } else if ("status".equals(input[0])) {
+                System.out.println("점수를 표시합니다.");
+            } else {
+                System.out.println("입력이 잘못 되었습니다.");
             }
-            System.out.println("입력이 잘못 되었습니다.");
         }
     }
 }

@@ -9,6 +9,8 @@ public abstract class Chessman {
 
     public abstract boolean canBeMoveTo(Board from, Board to);
 
+    public abstract char getCharValue();
+
     public Color getColor() {
         return color;
     }

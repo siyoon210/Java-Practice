@@ -39,4 +39,10 @@ public class King extends Chessman {
     private boolean isCapturingSameColor(final Board to) {
         return (to.getChessman() != null) && (to.getChessman().getColor() == color);
     }
+
+    @Override
+    public char getCharValue() {
+        final char charValue = 'k';
+        return color == Color.BLACK ? Character.toUpperCase(charValue) : charValue;
+    }
 }

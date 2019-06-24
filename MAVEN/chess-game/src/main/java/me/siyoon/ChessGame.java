@@ -61,15 +61,13 @@ public class ChessGame {
         }
     }
 
-    //명령이 들어오면 명령을 인터페이스로 두고 메시지 형태로 주고 받게 해서 콘솔이 아니라 다른 걸로도 쉽게 이전할 수 있도록 구상
-
     private void input() {
         while (true) {
-            final UserControl.Action action = controller.getAction();
-            if (action.equals(UserControl.Action.Move)) {
+            final String[] input = controller.input();
+            if ("move".equals(input[0])) {
                 try {
-                    final Board from = Board.valueOf(null);
-                    final Board to = Board.valueOf(null); //TODO Action과 좌표를 같이 전달 받는 방법을 생각해보자
+                    final Board from = Board.valueOf(input[1]);
+                    final Board to = Board.valueOf(input[2]);
 
                     if ((from.getChessman().getColor() == Chessman.Color.WHITE) && !whiteTurn) {
                         System.out.println("현재는 검은색 말 턴입니다.");

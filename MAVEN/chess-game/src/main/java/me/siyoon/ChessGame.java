@@ -80,9 +80,11 @@ public class ChessGame {
                     if (from.shiftChessman(to)) {
                         whiteTurn = !whiteTurn;
                         return;
+                    } else{
+                        System.out.println("유효하지 않은 움직임");
                     }
                 } catch (IllegalArgumentException e) {
-                    System.out.println("입력이 잘못 되었습니다.");
+                    System.out.println("입력이 잘못 되었습니다. 좌표값 ");
                 }
             } else if ("start".equals(input[0])) {
                 System.out.println("시작합니다.");
@@ -91,7 +93,7 @@ public class ChessGame {
             } else if ("status".equals(input[0])) {
                 System.out.println("점수를 표시합니다.");
             } else {
-                System.out.println("입력이 잘못 되었습니다.");
+                System.out.println("입력이 잘못 되었습니다. else 문");
             }
         }
     }

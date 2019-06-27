@@ -30,6 +30,7 @@ public class ChessGame {
                     final Board from = Board.valueOf(input[1]);
                     final Board to = Board.valueOf(input[2]);
 
+                    //Todo null 체크
                     if ((from.getChessman().getColor() == Chessman.Color.WHITE) && !whiteTurn) {
                         System.out.println("현재는 검은색 말 턴입니다.");
                         continue;

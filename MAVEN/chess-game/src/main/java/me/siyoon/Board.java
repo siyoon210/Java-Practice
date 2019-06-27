@@ -14,6 +14,8 @@ public enum Board {
 
     public final static int WIDTH = 8;
     public final static int HEIGHT = 8;
+    public static Board whiteKingPosition = Board.e1;
+    public static Board blackKingPosition = Board.e8;
     private final Coordinate coordinate;
     private Chessman chessman;
 

@@ -40,6 +40,9 @@ public class ChessGame {
 
                     if (from.shiftChessman(to)) {
                         whiteTurn = !whiteTurn;
+                        if (checkKingAlive()) {
+                            System.exit(0);
+                        }
                         return;
                     } else{
                         System.out.println("유효하지 않은 움직임");
@@ -57,5 +60,17 @@ public class ChessGame {
                 System.out.println("입력이 잘못 되었습니다. else 문");
             }
         }
+    }
+
+    private boolean checkKingAlive() {
+        if (!(Board.whiteKingPosition.getChessman() instanceof King)) {
+            System.out.println("흰색 킹이 잡혔습니다.");
+            return true;
+        } else if (!(Board.blackKingPosition.getChessman() instanceof King)) {
+            System.out.println("검은색 킹이 잡혔습니다.");
+            return true;
+        }
+
+        return false;
     }
 }

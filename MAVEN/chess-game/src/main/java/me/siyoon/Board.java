@@ -40,10 +40,26 @@ public enum Board {
         if (chessman.canBeMoveTo(this, to)) {
             to.setChessman(chessman);
             chessman = null;
+            ifChessmanIsKingAdjustPosition(to);
             return true;
         }
 
         return false;
+    }
+
+    private void ifChessmanIsKingAdjustPosition(final Board to) {
+        if (chessman instanceof King) {
+            switch (chessman.getColor()) {
+                case BLACK:
+                    blackKingPosition = to;
+                    break;
+                case WHITE:
+                    whiteKingPosition = to;
+                    break;
+                default:
+                    throw new RuntimeException("Color값이 이상하다.");
+            }
+        }
     }
 
     public int getIndexI() {

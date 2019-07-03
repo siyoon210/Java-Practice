@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac613564-a506-432e-ab11-8852ef534e4f" name="Default Changelist" comment="클래스 만듬">
-      <change beforePath="$PROJECT_DIR$/MAVEN/chess-game/src/main/java/me/siyoon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MAVEN/chess-game/src/main/java/me/siyoon/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/practice/parallelstream/StreamPerformance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaJungsuk/chap14/StreamEx2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaJungsuk/chap14/StreamEx2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/src/fastcampus3/businesscard/target/" />
@@ -40,10 +42,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/practice/wrapperclass/PrimitiveVsReference.java">
+        <entry file="file://$PROJECT_DIR$/src/practice/parallelstream/StreamPerformance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="77" selection-start-line="4" selection-start-column="77" selection-end-line="4" selection-end-column="77" />
+            <state relative-caret-position="455">
+              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,8 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/practice/casting/CastingTest.java" />
-        <option value="$PROJECT_DIR$/src/practice/stringbuffer/StringTest.java" />
         <option value="$PROJECT_DIR$/src/practice/regularexpression/RegularExpression.java" />
         <option value="$PROJECT_DIR$/src/fastcampus3/javaexam/Goods.java" />
         <option value="$PROJECT_DIR$/src/fastcampus3/javaexam/src/main/java/my/examples/javaexam/Goods.java" />
@@ -126,6 +129,8 @@
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/practice/enummapenumset/EnumMapTest.java" />
         <option value="$PROJECT_DIR$/src/practice/wrapperclass/PrimitiveVsReference.java" />
+        <option value="$PROJECT_DIR$/src/practice/parallelstream/Stream.java" />
+        <option value="$PROJECT_DIR$/src/practice/parallelstream/StreamPerformance.java" />
       </list>
     </option>
   </component>
@@ -136,7 +141,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="1680" />
     <option name="width" value="2560" />
     <option name="height" value="1080" />
@@ -149,6 +154,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,7 +194,22 @@
               <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="wrapperclass" type="462c0819:PsiDirectoryNode" />
+              <item name="parallelstream" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="templatecallbackpattern" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="templatecallbackpattern" type="462c0819:PsiDirectoryNode" />
+              <item name="TemplateCallback.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
@@ -248,8 +270,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +316,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PrimitiveVsReference">
+  <component name="RunManager" selected="Application.StreamPerformance">
     <configuration name="EnumMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="practice.enummapenumset.EnumMapTest" />
       <module name="Java-Practice" />
@@ -349,12 +369,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StaticClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.staticclass.StaticClass" />
+    <configuration name="StreamPerformance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.parallelstream.StreamPerformance" />
       <module name="Java-Practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="practice.staticclass.*" />
+          <option name="PATTERN" value="practice.parallelstream.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -363,19 +383,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.StaticClass" />
       <item itemvalue="Application.MapMerge" />
       <item itemvalue="Application.EnumMapTest" />
       <item itemvalue="Application.SerializationTest" />
       <item itemvalue="Application.PrimitiveVsReference" />
+      <item itemvalue="Application.StreamPerformance" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StreamPerformance" />
         <item itemvalue="Application.PrimitiveVsReference" />
         <item itemvalue="Application.SerializationTest" />
         <item itemvalue="Application.EnumMapTest" />
         <item itemvalue="Application.MapMerge" />
-        <item itemvalue="Application.StaticClass" />
       </list>
     </recent_temporary>
   </component>
@@ -495,6 +515,7 @@
       <workItem from="1559907192197" duration="1710000" />
       <workItem from="1560076958406" duration="225000" />
       <workItem from="1560920676169" duration="39000" />
+      <workItem from="1562113388530" duration="682000" />
     </task>
     <task id="LOCAL-00001" summary="로또머신 클래스 만듬">
       <created>1536230315733</created>
@@ -507,7 +528,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238056000" />
+    <option name="totallyTimeSpent" value="238738000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -522,7 +543,7 @@
     <frame x="1680" y="0" width="2560" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48467153" visible="true" weight="0.121357284" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48467153" visible="true" weight="0.12255489" />
       <window_info id="Structure" order="1" sideWeight="0.51532847" side_tool="true" weight="0.21375921" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -533,8 +554,8 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info id="JRebel" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32769555" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.3975782" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32744282" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.3970894" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39847162" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -542,7 +563,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32976827" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5005325" side_tool="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3266385" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32640332" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
@@ -611,23 +632,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="로또머신 클래스 만듬" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/practice/collections/list/sort/SortTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/LinkedList/LinkedListTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/practice/optional/OptionalTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -960,13 +964,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/practice/enummapenumset/EnumMapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/practice/mapmerge/MapMerge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -981,6 +978,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="77" selection-start-line="4" selection-start-column="77" selection-end-line="4" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/practice/templatecallbackpattern/TemplateCallback.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/practice/enummapenumset/EnumMapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/practice/parallelstream/StreamPerformance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

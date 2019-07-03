@@ -1,12 +1,17 @@
 package practice.parallelstream;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class StreamPerformance {
     public static void main(String[] args) {
-        final List<Integer> integers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
+        final List<Integer> integers = new ArrayList<>(1_000);
+
+        for (int i = 0; i < 1_000; i++) {
+            integers.add(i);
+        }
+
         calcStreamPerformance(integers);
         calcParallelStreamPerformance(integers);
     }
@@ -16,7 +21,7 @@ public class StreamPerformance {
 
         for (int i = 0; i < testCase.length; i++) {
             long startTime = System.nanoTime();
-            for (int j = 0; j < 1000; j++) {
+            for (int j = 0; j < 10; j++) {
                 final List<Integer> evenNumlist = integers.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
             }
             long endTime = System.nanoTime();
@@ -39,7 +44,7 @@ public class StreamPerformance {
 
         for (int i = 0; i < testCase.length; i++) {
             long startTime = System.nanoTime();
-            for (int j = 0; j < 1000; j++) {
+            for (int j = 0; j < 10; j++) {
                 final List<Integer> evenNumlist = integers.parallelStream().filter(n -> n % 2 == 0).collect(Collectors.toList());
             }
             long endTime = System.nanoTime();

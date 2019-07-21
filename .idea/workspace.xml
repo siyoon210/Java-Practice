@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac613564-a506-432e-ab11-8852ef534e4f" name="Default Changelist" comment="클래스 만듬">
-      <change afterPath="$PROJECT_DIR$/src/practice/parallelstream/StreamPerformance.java" afterDir="false" />
+    <list default="true" id="ac613564-a506-432e-ab11-8852ef534e4f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/practice/colletionequlas/CollectionEqualsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaJungsuk/chap14/StreamEx2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaJungsuk/chap14/StreamEx2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/src/fastcampus3/businesscard/target/" />
@@ -42,10 +41,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/practice/parallelstream/StreamPerformance.java">
+        <entry file="file://$PROJECT_DIR$/src/practice/colletionequlas/CollectionEqualsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+            <state relative-caret-position="357">
+              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,9 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/practice/regularexpression/RegularExpression.java" />
-        <option value="$PROJECT_DIR$/src/fastcampus3/javaexam/Goods.java" />
-        <option value="$PROJECT_DIR$/src/fastcampus3/javaexam/src/main/java/my/examples/javaexam/Goods.java" />
         <option value="$PROJECT_DIR$/src/fastcampus3/javaexam/src/main/java/my/examples/javaexam/goods/GoodsExam.java" />
         <option value="$PROJECT_DIR$/src/fastcampus3/javaexam/src/main/java/my/examples/javaexam/goods/Goods.java" />
         <option value="$PROJECT_DIR$/src/fastcampus3/javaexam/src/main/java/my/examples/javaexam/goods/GoodsExam2.java" />
@@ -131,6 +127,9 @@
         <option value="$PROJECT_DIR$/src/practice/wrapperclass/PrimitiveVsReference.java" />
         <option value="$PROJECT_DIR$/src/practice/parallelstream/Stream.java" />
         <option value="$PROJECT_DIR$/src/practice/parallelstream/StreamPerformance.java" />
+        <option value="$PROJECT_DIR$/src/practice/extendsset/ExtendsSet.java" />
+        <option value="$PROJECT_DIR$/src/practice/regularexpression/RegularExpression.java" />
+        <option value="$PROJECT_DIR$/src/practice/colletionequlas/CollectionEqualsTest.java" />
       </list>
     </option>
   </component>
@@ -141,10 +140,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1680" />
-    <option name="width" value="2560" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="210" />
+    <option name="y" value="151" />
+    <option name="width" value="1260" />
+    <option name="height" value="771" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -154,8 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,97 +177,14 @@
               <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="enummapenumset" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="enummapenumset" type="462c0819:PsiDirectoryNode" />
-              <item name="EnumMapTest.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="parallelstream" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="templatecallbackpattern" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Java-Practice" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="templatecallbackpattern" type="462c0819:PsiDirectoryNode" />
-              <item name="TemplateCallback.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Java-Practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="function" type="462c0819:PsiDirectoryNode" />
+              <item name="colletionequlas" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,8 +196,11 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -316,26 +234,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StreamPerformance">
-    <configuration name="EnumMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.enummapenumset.EnumMapTest" />
+  <component name="RunManager" selected="Application.CollectionEqualsTest">
+    <configuration name="CollectionEqualsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.colletionequlas.CollectionEqualsTest" />
       <module name="Java-Practice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="practice.enummapenumset.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MapMerge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.mapmerge.MapMerge" />
-      <module name="Java-Practice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="practice.mapmerge.*" />
+          <option name="PATTERN" value="practice.colletionequlas.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -349,6 +254,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="practice.wrapperclass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegularExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.regularexpression.RegularExpression" />
+      <module name="Java-Practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice.regularexpression.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -383,19 +301,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MapMerge" />
-      <item itemvalue="Application.EnumMapTest" />
       <item itemvalue="Application.SerializationTest" />
       <item itemvalue="Application.PrimitiveVsReference" />
       <item itemvalue="Application.StreamPerformance" />
+      <item itemvalue="Application.RegularExpression" />
+      <item itemvalue="Application.CollectionEqualsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CollectionEqualsTest" />
+        <item itemvalue="Application.RegularExpression" />
         <item itemvalue="Application.StreamPerformance" />
         <item itemvalue="Application.PrimitiveVsReference" />
         <item itemvalue="Application.SerializationTest" />
-        <item itemvalue="Application.EnumMapTest" />
-        <item itemvalue="Application.MapMerge" />
       </list>
     </recent_temporary>
   </component>
@@ -515,7 +433,16 @@
       <workItem from="1559907192197" duration="1710000" />
       <workItem from="1560076958406" duration="225000" />
       <workItem from="1560920676169" duration="39000" />
-      <workItem from="1562113388530" duration="682000" />
+      <workItem from="1562113388530" duration="1769000" />
+      <workItem from="1562116934450" duration="43000" />
+      <workItem from="1562287924317" duration="314000" />
+      <workItem from="1562288256883" duration="15000" />
+      <workItem from="1562326422554" duration="556000" />
+      <workItem from="1562677721434" duration="2732000" />
+      <workItem from="1562719294038" duration="1018000" />
+      <workItem from="1562804371095" duration="461000" />
+      <workItem from="1563410170002" duration="694000" />
+      <workItem from="1563683579323" duration="155000" />
     </task>
     <task id="LOCAL-00001" summary="로또머신 클래스 만듬">
       <created>1536230315733</created>
@@ -524,11 +451,39 @@
       <option name="project" value="LOCAL" />
       <updated>1536230315733</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="stream과 parallel stream 성능비교 (왜 parallelStream이 더 느리지?)">
+      <created>1562114124729</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562114124729</updated>
+    </task>
+    <task id="LOCAL-00003" summary="stream과 parallel stream 성능비교 List가 담고있는 자료가 많아지니까 parallel이 더 빠르네&#10;&#10;(15개에서 1000개로 올려봄)&#10;아마도 파랄렐은 병렬 처리를 위한 사전행위 사후행위 때문에 &#10;오히려 적은 갯수의 자료에서는 느려지는거 같다.">
+      <created>1562114538596</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562114538596</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Matcher의 find()는 마치 이터레이터의 hasNext()처럼 사용 되는구나&#10;&#10;한번 찾은거면 다음것을 찾고 다음것을 찾고 다음것을 찾고...">
+      <created>1562720170641</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562720170641</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Matcher의 find()는 마치 이터레이터의 hasNext()처럼 사용 되는구나&#10;&#10;한번 찾은거면 다음것을 찾고 다음것을 찾고 다음것을 찾고...">
+      <created>1562804936253</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562804936253</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238738000" />
+    <option name="totallyTimeSpent" value="245813000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -540,10 +495,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1680" y="0" width="2560" height="1080" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48467153" visible="true" weight="0.12255489" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48467153" weight="0.47815385" />
       <window_info id="Structure" order="1" sideWeight="0.51532847" side_tool="true" weight="0.21375921" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -554,13 +509,13 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info id="JRebel" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32744282" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.3970894" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32725322" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.39684328" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39847162" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32976827" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32976827" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.27733934" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5005325" side_tool="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32640332" />
@@ -629,104 +584,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="클래스 만듬" />
     <MESSAGE value="로또머신 클래스 만듬" />
-    <option name="LAST_COMMIT_MESSAGE" value="로또머신 클래스 만듬" />
+    <MESSAGE value="stream과 parallel stream 성능비교 (왜 parallelStream이 더 느리지?)" />
+    <MESSAGE value="stream과 parallel stream 성능비교 List가 담고있는 자료가 많아지니까 parallel이 더 빠르네&#10;&#10;(15개에서 1000개로 올려봄)&#10;아마도 파랄렐은 병렬 처리를 위한 사전행위 사후행위 때문에 &#10;오히려 적은 갯수의 자료에서는 느려지는거 같다." />
+    <MESSAGE value="Matcher의 find()는 마치 이터레이터의 hasNext()처럼 사용 되는구나&#10;&#10;한번 찾은거면 다음것을 찾고 다음것을 찾고 다음것을 찾고..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Matcher의 find()는 마치 이터레이터의 hasNext()처럼 사용 되는구나&#10;&#10;한번 찾은거면 다음것을 찾고 다음것을 찾고 다음것을 찾고..." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/practice/optional/OptionalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="33" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/defaultmethod/DefaultMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="e#87#88#0" expanded="true" />
-            <element signature="e#139#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/calculatetime/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/stringbuffer/StringTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/string/IsEmpty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/foreachvsfor/ForeachVsFor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/callbyvalue/JavaCallByValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-          <folding>
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/performance/equalsandhashcode/EqualsAndHashCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/interfacetest/multipleextends/MultipleExtends.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/differintgerref/DifferIntegerSameRef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.sdkman/candidates/java/8.0.202-zulu/src.zip!/java/util/Iterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-787">
@@ -964,16 +827,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/practice/mapmerge/MapMerge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/practice/wrapperclass/PrimitiveVsReference.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -984,17 +837,108 @@
     <entry file="file://$PROJECT_DIR$/src/practice/templatecallbackpattern/TemplateCallback.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/practice/enummapenumset/EnumMapTest.java">
+    <entry file="file://$PROJECT_DIR$/src/practice/optional/OptionalTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        <state relative-caret-position="273">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/practice/parallelstream/StreamPerformance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+        <state relative-caret-position="441">
+          <caret line="21" selection-start-line="21" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.sdkman/candidates/java/8.0.202-zulu/src.zip!/java/util/TreeSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="97" column="47" lean-forward="true" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+          <folding>
+            <element signature="e#4945#4946#0" expanded="true" />
+            <element signature="e#4971#4972#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.sdkman/candidates/java/8.0.202-zulu/src.zip!/java/util/AbstractSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.sdkman/candidates/java/8.0.202-zulu/src.zip!/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4223">
+          <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.sdkman/candidates/java/8.0.202-zulu/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5250">
+          <caret line="282" column="23" lean-forward="true" selection-start-line="282" selection-start-column="23" selection-end-line="282" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.sdkman/candidates/java/8.0.202-zulu/src.zip!/java/util/Hashtable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.sdkman/candidates/java/8.0.202-zulu/src.zip!/java/util/HashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="849">
+          <caret line="223" column="68" selection-start-line="223" selection-start-column="68" selection-end-line="223" selection-end-column="68" />
+          <folding>
+            <element signature="e#4737#4738#0" expanded="true" />
+            <element signature="e#4774#4775#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/practice/extendsset/ExtendsSet.java" />
+    <entry file="file://$PROJECT_DIR$/src/practice/regularexpression/RegularExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/practice/enummapenumset/EnumMapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/practice/mapmerge/MapMerge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/practice/colletionequlas/CollectionEqualsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

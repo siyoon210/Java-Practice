@@ -24,5 +24,10 @@ public class BinOper {
         System.out.println(Integer.toBinaryString(result3));
 
 
+        //만약 n가지 경우가 있는 조합을 비트연산으로 알아낼려면?
+        int n = 3;
+        for (int i = 0; i < 1 << n; i++) {
+            System.out.println(Integer.toBinaryString(i));
+        }
     }
 }

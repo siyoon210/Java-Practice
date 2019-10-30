@@ -1,4 +1,4 @@
-package uml_for_java_programmers.chapter11_coffemaker;
+package uml_for_java_programmers.chapter11_coffemaker.mypractice;
 
 public class 끓이는장치Impl implements 끓이는장치 {
     public static final int BOILER_EMPTY = 0;

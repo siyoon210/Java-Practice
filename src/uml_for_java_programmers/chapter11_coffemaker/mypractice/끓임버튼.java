@@ -1,4 +1,4 @@
-package uml_for_java_programmers.chapter11_coffemaker;
+package uml_for_java_programmers.chapter11_coffemaker.mypractice;
 
 public class 끓임버튼 {
     private final CoffeeMaker coffeeMaker;

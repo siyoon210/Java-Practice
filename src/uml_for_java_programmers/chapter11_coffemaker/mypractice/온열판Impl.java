@@ -1,4 +1,4 @@
-package uml_for_java_programmers.chapter11_coffemaker;
+package uml_for_java_programmers.chapter11_coffemaker.mypractice;
 
 public class 온열판Impl implements 온열판 {
     public static final int WARMER_EMPTY = 0;

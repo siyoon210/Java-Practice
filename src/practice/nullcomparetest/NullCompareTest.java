@@ -6,5 +6,7 @@ public class NullCompareTest {
         Integer nullInteger = null;
 
         System.out.println("integer == nullInteger = " + (nullInteger == integer));
+
+        System.out.println("nullInteger.equals(null) = " + integer.equals(null));
     }
 }

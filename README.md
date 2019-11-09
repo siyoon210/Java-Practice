@@ -1,5 +1,30 @@
 # Java-Practice
 
+## (19.11.09) LinkedHashSet vs TreeSet
+### LinkedHashSet
+- LinkedHashSet은 입력된 '순서'를 기억한다. (List 처럼)
+- 하지만 List와 다르게 인덱스는 존재하지 않는다. 그러므로 get() 메소드도 없다.
+- Hash Table을 사용하기 때문에 get(), remove(), contain()의 시간복잡도는 O(1)이다.
+
+### TreeSet
+- TreeSet은 입력된 순서가 아니라, '정렬된 순서'로 삽입된다.
+    ```
+    TreeSet<Integer> treeSet = new TreeSet<>();
+    treeSet.add(5);
+    treeSet.add(4);
+    treeSet.add(3);
+    treeSet.add(2);
+    treeSet.add(1);
+    ```
+    - 위와 같이 삽입시켜도 1,2,3,4,5의 순서로 정렬 삽입된다.
+- 그러므로 TreeSet에 인자로 삽입되기 위해서는 Comparable 인터페이스를 구현해야 한다.
+- red-black tree 구조를 사용하기 때문에 get(), remove(), contain()의 시간복잡도는 O(logN)이다.
+- 대신 first(), last(), headSet(), tailSet().. 의 메소드를 갖고있다.
+
+- HashSet vs. TreeSet vs. LinkedHashSet 
+  - HashSet is Implemented using a hash table. Elements are not ordered. The add, remove, and contains methods has constant time complexity O(1). TreeSet is implemented using a tree structure(red-black tree in algorithm book). The elements in a set are sorted, but the add, remove, and contains methods has  time complexity of O(log (n)). It offers several methods to deal with the ordered set like first(), last(), headSet(), tailSet(), etc.  LinkedHashSet is between HashSet and TreeSet. It is implemented as a hash table with a linked list running through it, so it provides the order of insertion. The time complexity of basic methods is O(1).
+  - https://dzone.com/articles/hashset-vs-treeset-vs
+
 ## (19.11.07) SRP - Single Responsibility Principle (단일 책임 원칙)
     '변경되어야 하는 이유가 오직 하나뿐이여야한다.'
 쉽게 생각했지만 가장 중요한 '변경되어야 하는 이유'에 대해서 깊게 생각해보지 않았다.

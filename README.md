@@ -1,9 +1,61 @@
 # Java-Practice
+## (19.11.29) FACADE 패턴 (퍼사드 패턴)
+- FACADE의 사전적 의미 : 1. (건물의) 정면 2. (실제와 다른) 표면, 허울
+> 퍼사드는 클래스 라이브러리 같은 어떤 소프트웨어의 다른 커다란 코드 부분에 대한 간략화된 인터페이스를 제공하는 객체이다.
+
+- 아래 Java 코드 예제는 사용자(you)가 퍼사드(컴퓨터)를 통해 컴퓨터 내부의 부품(CPU, HDD) 등을 접근한다는 내용의 추상적인 예제이다. (https://ko.wikipedia.org/wiki/퍼사드_패턴)
+```
+/* Complex parts */
+
+class CPU {
+	public void freeze() { ... }
+	public void jump(long position) { ... }
+	public void execute() { ... }
+}
+
+class Memory {
+	public void load(long position, byte[] data) {
+		...
+	}
+}
+
+class HardDrive {
+	public byte[] read(long lba, int size) {
+		...
+	}
+}
+
+
+class Computer {
+	public void startComputer() {
+        CPU cpu = new CPU();
+        Memory memory = new Memory();
+        HardDrive hardDrive = new HardDrive();
+		cpu.freeze();
+		memory.load(BOOT_ADDRESS, hardDrive.read(BOOT_SECTOR, SECTOR_SIZE));
+		cpu.jump(BOOT_ADDRESS);
+		cpu.execute();
+	}
+}
+
+/* Client */
+
+class You {
+	public static void main(String[] args) throws ParseException {
+		Computer facade = /* grab a facade instance */;
+		facade.startComputer();
+	}
+}
+```
+
+- 외부의 클라이언트에게 복잡하게 사용되고 있는 클래스들을 추상적으로 제공하는 관문과도 같은 역할을 한다.
+- Q 클래스 수준의 '캡슐화'라고 봐도 무리가 없을까?
 
 ## (19.11.19) 패키지(default) 접근제어자를 가지고 있는 클래스
 - 패키지(default) 접근제어자를 가지고 있는 클래스는 한 뎁스 더 깊은 곳에서 접근이 불가능하다. 즉, 정말 같은 패키지 안에 존재해야만 접근 가능하다.
 - 연습예제 : AccessModifierTest.java
 
+/* Façade */
 ## (19.11.07) SRP - Single Responsibility Principle (단일 책임 원칙)
     '변경되어야 하는 이유가 오직 하나뿐이여야한다.'
 쉽게 생각했지만 가장 중요한 '변경되어야 하는 이유'에 대해서 깊게 생각해보지 않았다.

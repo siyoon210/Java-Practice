@@ -1,5 +1,15 @@
 # Java-Practice
 
+## (19.12.16) Map.merge
+- 맵에서 해당 키값이 존재하지 않는 경우와, 이미 존재하는 경우를 한줄로 처리하는 메소드
+```
+public V merge(K key,
+               V value,
+               BiFunction<? super V,? super V,? extends V> remappingFunction) /* 기존 V,, 새로운 V, 반환 V */
+```
+- https://docs.oracle.com/javase/8/docs/api/
+- 연습예제 : MapMerge.class
+
 ## (19.12.13) EnumSet(EnumMap)의 순서는 입력순서인가, Enum에 명시된 순서인가
 - EnumSet(EnumMap)의 순서는 **Enum**에 명시된 순서다.
 - 즉, 요일 Enum에 월화수목금토일 순서대로 Enum에 명시되어 있다면 어떤 순서로 입력되었던간에 월화수목금토일 순서로 나온다

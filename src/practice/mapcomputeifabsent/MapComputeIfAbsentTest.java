@@ -8,9 +8,12 @@ public class MapComputeIfAbsentTest {
         Map<String, Integer> map = new HashMap<>();
 
         map.put("siyoon", 1);
-        final Integer integer = map.computeIfAbsent("siyoon", String::hashCode);
-        System.out.println("integer = " + integer);
 
+        final Integer siyoon = map.computeIfAbsent("siyoon", s -> s.length());
+        System.out.println("siyoon = " + siyoon);
 
+        final Integer puru = map.putIfAbsent("puru", 777);
+        System.out.println("puru = " + puru);
+        System.out.println("map.get(\"puru\") = " + map.get("puru"));
     }
 }

@@ -1,5 +1,28 @@
 # Java-Practice
 
+## (19.12.17) Map.computeIfAbsent
+- 값이 Map.containsKey() + Map.get()이라고 생각하면 된다.
+- 만약에 해당 키값이 존재한다면, 해당 밸류를 바로 가져온다. 하지만 존재하지 않는다면 두번쨰 인자로 들어간 람다식을 실행하고 그 값을 반환한다.
+
+### containsKey()를 사용한 찐따같은 방법
+```
+if(map.containsKey("siyoon")) {
+    return map.get("siyoon");
+} else {
+    int length = s.length();
+    map.put("siyoon", length);
+    return map.get("siyoon");
+}
+```
+
+### computeIfAbsent()를 사용한 우아한 방법
+```
+return map.computeIfAbsent("siyoon", s -> s.length()); //키값의 길이를 밸류로 저장하는 함수식 바로 할당
+```
+- 위 아래의 코드는 같은 일을 한다.
+
+- **Map을 다룰 때 containsKey() 사용한다면 다른방법이 없는지 생각해보자**
+
 ## (19.12.16) Map.merge
 - 맵에서 해당 키값이 존재하지 않는 경우와, 이미 존재하는 경우를 한줄로 처리하는 메소드
 ```

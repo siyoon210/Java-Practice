@@ -1,10 +1,27 @@
 # Java-Practice
 
-## (19.12.17) Map.computeIfAbsent
+## (19.12.28) Map.putIfAbsent()
+
+### vs Map.computeIfAbsent()
+- computeIfAbsent와 putIfAbsent는 유사한 기능을 하지만 차이점이 존재한다.
+
+1. computeIfAbsent는 function을 갖지만, putIfAbsent는 값(value)를 갖는다. (putIfAbsent의 메소드를 할당하면 일단 메소드는 실행된다. 실행 이후에 put할지 말지를 결정한다.)
+2. computeIfAbsent는 실행되는 동시에 반환값도 실행된 값을 반환하지만, putIfAbsent는 반환값이 null을 리턴한다.
+
+- 연습예제 : MapComputeIfAbsentTest.class
+- 그럼 putIfAbsent에 장점이 뭐야..?
+
+### vs Map.getOrDefault()
+- If your goal is only to retrieve the value, then use getOrDefault. Else, if you want to set the value when it does not exist, use putIfAbsent.
+- 기본값만 반환받고자 한다면 getOrDefault()를 사용하고, 값을 설정하고 싶다면 putIfAbsent()를 사용하자.
+
+- 참고 : https://stackoverflow.com/questions/48183999/what-is-the-difference-between-putifabsent-and-computeifabsent-in-java-8-map
+
+## (19.12.17) Map.computeIfAbsent()
 - Map.containsKey() + Map.get()이라고 생각하면 된다.
 - 만약에 해당 키값이 존재한다면, 해당 밸류를 바로 가져온다. 하지만 존재하지 않는다면 두번쨰 인자로 들어간 람다식을 실행하고 그 값을 반환한다.
 
-### 방법1. containsKey()를 사용한 찐따같은 방법
+### 방법1. containsKey()를 사용한 ~~찐따같은~~ 방법
 ```
 if(map.containsKey("siyoon")) {
     return map.get("siyoon");

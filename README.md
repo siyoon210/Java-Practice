@@ -10,6 +10,7 @@
 
 - 연습예제 : MapComputeIfAbsentTest.class
 - 그럼 putIfAbsent에 장점이 뭐야..?
+    - A) 메소드를 할당 할 수 있다
 
 ### vs Map.getOrDefault()
 - If your goal is only to retrieve the value, then use getOrDefault. Else, if you want to set the value when it does not exist, use putIfAbsent.

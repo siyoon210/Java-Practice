@@ -17,12 +17,15 @@ public class IteratorRemoveTest {
         list.add(5);
 
         final Iterator<Integer> iterator = list.iterator();
+
         while (iterator.hasNext()) {
             final Integer next = iterator.next();
             if (next % 2 == 0) {
                 iterator.remove();
             }
         }
+
+//        list.removeIf(next -> next % 2 == 0);
 
         assertEquals(list.size(), 3);
     }

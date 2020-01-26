@@ -1,5 +1,28 @@
 # Java-Practice
 
+## (20.01.26) 리스트(컬렉션)를 순환하면서 요소를 안전하게 삭제하는 방법
+- 리스트(컬렉션)를 순회하면서 요소를 삭제하게되면 인덱스가 뒤틀리게 되어 문제가 발생한다. (그래서 PAT할때 인덱스를 거꾸로 삭제하는 편법을 쓴곤 했었다.)
+이런 문제로 안전하게 삭제하기 위해서 iterator의 remove()를 사용하거나 Collection.removeIf() 메소드를 사용한다. 
+
+### 1. iterator의 remove()
+- iterator에서 최근에 next로 꺼낸 요소를 실제 리스트에서 삭제한다.
+```
+final Iterator<Integer> iterator = list.iterator();
+
+while (iterator.hasNext()) {
+    final Integer next = iterator.next();
+    if (next % 2 == 0) {
+    iterator.remove();
+    }
+}
+```
+
+### 2. Collection.removeIf()
+- 이터레이터 생성없이 한줄로 끝! 내부적으로 같은 로직을 사용하고 삭제되었다면 불린값으로 true를 리턴한다.
+```
+list.removeIf(next -> next % 2 == 0);
+```
+
 ## (19.12.28) Map.putIfAbsent()
 
 ### vs Map.computeIfAbsent()

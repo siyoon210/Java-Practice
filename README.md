@@ -1,5 +1,10 @@
 # Java-Practice
 
+## (20.01.27) Arrays.asList에 대한 고찰
+- Arrays.asList를 사용하여 iterator remove()를 실행시키면 익셉션이 난다.
+- 분명 Arrays.asList()에서 반환은 new ArrayList()인데, 왜 ArrayList의 인스턴스가 아닐까?
+-> 이름이 같아서 혼동된 건데, Arrays.asList()는 java.util.Arrays$ArrayList 컬렉션의 리스트는 java.util.ArrayList다!
+
 ## (20.01.26) 리스트(컬렉션)를 순환하면서 요소를 안전하게 삭제하는 방법
 - 리스트(컬렉션)를 순회하면서 요소를 삭제하게되면 인덱스가 뒤틀리게 되어 문제가 발생한다. (그래서 PAT할때 인덱스를 거꾸로 삭제하는 편법을 쓴곤 했었다.)
 이런 문제로 안전하게 삭제하기 위해서 iterator의 remove()를 사용하거나 Collection.removeIf() 메소드를 사용한다. 

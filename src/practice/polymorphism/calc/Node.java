@@ -30,8 +30,8 @@ abstract class OpNode extends Node {
     Node right;
 }
 
-class AdditionalOpNode extends OpNode {
-    public AdditionalOpNode(Node left, Node right) {
+class AdditionalNode extends OpNode {
+    public AdditionalNode(Node left, Node right) {
         super(left, right);
     }
 
@@ -41,8 +41,8 @@ class AdditionalOpNode extends OpNode {
     }
 }
 
-class MultipleOpNode extends OpNode {
-    public MultipleOpNode(Node left, Node right) {
+class MultipleNode extends OpNode {
+    public MultipleNode(Node left, Node right) {
         super(left, right);
     }
 

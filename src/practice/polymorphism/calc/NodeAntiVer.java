@@ -15,5 +15,7 @@ public class NodeAntiVer {
                 return left.evaluate() * right.evaluate();
             // case ...
         }
+
+        return 0.0;
     }
 }

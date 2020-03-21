@@ -1,5 +1,10 @@
 # Java-Practice
 
+## (20.03.21) Stream Parallel()
+- stream 만 사용하면 병렬처리가 자동으로 되는줄 알았는데 아니었다. parallel()을 사용해야 병렬처리가 된가.
+- 사용하지 않으면 순차처리가 된다.
+- 예제코드 practice.stream.parallel
+
 ## (20.03.13) Optional 바르게 쓰기
 - Java Optional 바르게쓰기 (http://homoefficio.github.io/2019/10/03/Java-Optional-%EB%B0%94%EB%A5%B4%EA%B2%8C-%EC%93%B0%EA%B8%B0/)
 - 명심해야할점은 **"Optional" 객체는 비싼 객체다. Optional을 쓰기앞서 분명한 이점을 가지고 있는가?** 를 생각해보자.

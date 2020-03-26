@@ -1,5 +1,9 @@
 # Java-Practice
 
+## (20.03.26) hashCode()
+- 해시코드를 재정의 하지 않으면 논리적으로 완전히 같은 객체라도 서로 다른 무작위 해시코드를 뱉어낸다.
+- 예제코드 package practice.hashcode;
+
 ## (20.03.21) Stream Parallel()
 - stream 만 사용하면 병렬처리가 자동으로 되는줄 알았는데 아니었다. parallel()을 사용해야 병렬처리가 된가.
 - 사용하지 않으면 순차처리가 된다.

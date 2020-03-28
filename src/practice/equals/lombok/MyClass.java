@@ -1,7 +1,7 @@
 package practice.equals.lombok;
 
 class MyClass {
-    MyClass myClass;
+    MyClass myFieldClass;
     Double doubleRefValue;
     Integer integerRefValue;
     Double doubleRefNonNullValue;
@@ -14,9 +14,10 @@ class MyClass {
         if (!(o instanceof MyClass)) return false;
         final MyClass other = (MyClass) o;
         if (!other.canEqual((Object) this)) return false;
-        final Object this$myClass = this.myClass;
-        final Object other$myClass = other.myClass;
-        if (this$myClass == null ? other$myClass != null : !this$myClass.equals(other$myClass)) return false;
+        final Object this$myFieldClass = this.myFieldClass;
+        final Object other$myFieldClass = other.myFieldClass;
+        if (this$myFieldClass == null ? other$myFieldClass != null : !this$myFieldClass.equals(other$myFieldClass))
+            return false;
         final Object this$doubleRefValue = this.doubleRefValue;
         final Object other$doubleRefValue = other.doubleRefValue;
         if (this$doubleRefValue == null ? other$doubleRefValue != null : !this$doubleRefValue.equals(other$doubleRefValue))
@@ -45,8 +46,8 @@ class MyClass {
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
-        final Object $myClass = this.myClass;
-        result = result * PRIME + ($myClass == null ? 43 : $myClass.hashCode());
+        final Object $myFieldClass = this.myFieldClass;
+        result = result * PRIME + ($myFieldClass == null ? 43 : $myFieldClass.hashCode());
         final Object $doubleRefValue = this.doubleRefValue;
         result = result * PRIME + ($doubleRefValue == null ? 43 : $doubleRefValue.hashCode());
         final Object $integerRefValue = this.integerRefValue;

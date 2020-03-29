@@ -2,7 +2,7 @@ package practice.equals.java7;
 
 import java.util.Objects;
 
-class MyClass {
+public class MyClass {
     MyClass myFieldClass;
     Double doubleRefValue;
     Integer integerRefValue;

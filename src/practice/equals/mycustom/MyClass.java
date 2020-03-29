@@ -2,7 +2,7 @@ package practice.equals.mycustom;
 
 import java.util.Objects;
 
-class MyClass {
+public class MyClass {
     MyClass myFieldClass;
     Double doubleRefValue;
     Integer integerRefValue;
@@ -29,5 +29,15 @@ class MyClass {
     @Override
     public int hashCode() {
         return Objects.hash(myFieldClass, doubleRefValue, integerRefValue, doubleRefNonNullValue, integerRefNonNullValue, doublePrimitiveValue, intPrimitiveValue);
+    }
+
+    public MyClass(MyClass myFieldClass, Double doubleRefValue, Integer integerRefValue, Double doubleRefNonNullValue, Integer integerRefNonNullValue, double doublePrimitiveValue, int intPrimitiveValue) {
+        this.myFieldClass = myFieldClass;
+        this.doubleRefValue = doubleRefValue;
+        this.integerRefValue = integerRefValue;
+        this.doubleRefNonNullValue = doubleRefNonNullValue;
+        this.integerRefNonNullValue = integerRefNonNullValue;
+        this.doublePrimitiveValue = doublePrimitiveValue;
+        this.intPrimitiveValue = intPrimitiveValue;
     }
 }

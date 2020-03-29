@@ -1,6 +1,6 @@
 package practice.equals.lombok;
 
-class MyClass {
+public class MyClass {
     MyClass myFieldClass;
     Double doubleRefValue;
     Integer integerRefValue;
@@ -60,5 +60,15 @@ class MyClass {
         result = result * PRIME + (int) ($doublePrimitiveValue >>> 32 ^ $doublePrimitiveValue);
         result = result * PRIME + this.intPrimitiveValue;
         return result;
+    }
+
+    public MyClass(MyClass myFieldClass, Double doubleRefValue, Integer integerRefValue, Double doubleRefNonNullValue, Integer integerRefNonNullValue, double doublePrimitiveValue, int intPrimitiveValue) {
+        this.myFieldClass = myFieldClass;
+        this.doubleRefValue = doubleRefValue;
+        this.integerRefValue = integerRefValue;
+        this.doubleRefNonNullValue = doubleRefNonNullValue;
+        this.integerRefNonNullValue = integerRefNonNullValue;
+        this.doublePrimitiveValue = doublePrimitiveValue;
+        this.intPrimitiveValue = intPrimitiveValue;
     }
 }

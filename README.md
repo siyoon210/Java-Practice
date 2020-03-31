@@ -1,5 +1,10 @@
 # Java-Practice
 
+## (20.03.31) map.merge -> map.put(key, map.getOrDefault)
+- map.merge(key, 1, (integer2, integer1) -> integer + 1) 보다는
+- map.put(key, map.getOrDefault(key, 0) + 1); 가 깔끔한거 같다.
+    - 부과적으로 putIfAbsent 등이랑 적용해보는것도 괜찮을 듯
+
 ## (20.03.30) 참조타입 배열 clone()시 주의할점
 - 그냥 쓰지말자..
 - 참조는 바뀌지만 요소들은 같은 참조를 사용해서 넘겨준다. 그래서 복사된 배열에서 요소를 바뀌면 원본의 요소 값도 바뀐다.
@@ -66,6 +71,7 @@ list.removeIf(next -> next % 2 == 0);
 ### vs Map.getOrDefault()
 - If your goal is only to retrieve the value, then use getOrDefault. Else, if you want to set the value when it does not exist, use putIfAbsent.
 - 기본값만 반환받고자 한다면 getOrDefault()를 사용하고, 값을 설정하고 싶다면 putIfAbsent()를 사용하자.
+    - (20.03.31)에 활용 예제 추가
 
 - 참고 : https://stackoverflow.com/questions/48183999/what-is-the-difference-between-putifabsent-and-computeifabsent-in-java-8-map
 

@@ -1,5 +1,9 @@
 # Java-Practice
 
+## (20.04.03) 추상클래스도 인스턴스화가 불가능하지 않다.
+- 추상클래스라도 abstract 메서드를 모두 정의하여 반환한다면 인스턴스로써 사용가능하다.
+- 예제코드 package practice.mylist;
+
 ## (20.03.31) map.merge -> map.put(key, map.getOrDefault)
 - map.merge(key, 1, (integer2, integer1) -> integer + 1) 보다는
 - map.put(key, map.getOrDefault(key, 0) + 1); 가 깔끔한거 같다.

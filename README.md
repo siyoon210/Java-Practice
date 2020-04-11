@@ -4,6 +4,7 @@
 - 기능적으로는 같다.
 https://stackoverflow.com/questions/22860582/java-generics-wildcard-vs-type-parametere/22860768
 
+### 제네릭 메서드와 와일드카드의 특징
 - 타입 매개변수가 실체화되지 않는데, 예외적으로 제네릭 메서드와 와일드카드는 실체화 된다. (컴파일 이후로도 남아 있게 된다.)
 - 실체화가 되기때문에 메소드 안에서 특정 인스턴스를 넣는걸 허용하지 않는다. 오로지 null만 넣을 수 있다.
 예제코드 : package practice.generics.wildcard;

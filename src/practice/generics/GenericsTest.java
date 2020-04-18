@@ -1,6 +1,7 @@
 package practice.generics;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class GenericsTest {
     public static void main(String[] args) {

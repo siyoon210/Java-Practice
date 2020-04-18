@@ -1,5 +1,13 @@
 # Java-Practice
 
+## (20.04.18) 제네릭 메서드가 와일드카드와 다른점
+### 제네릭 메서드의 장점
+- 제네릭 메서드는 (메서드 내부에서) 컨테이너에 매개변수 타입을 'add'할 수 있다.
+- 하지만 와일드카드는 불가능하다.
+
+### 와일드카드의 장점
+Q) 뭐지..?
+
 ## (20.04.11) 제네릭 메서드 vs 와일드카드
 - 기능적으로는 같다.
 https://stackoverflow.com/questions/22860582/java-generics-wildcard-vs-type-parametere/22860768

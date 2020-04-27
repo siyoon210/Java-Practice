@@ -1,17 +1,19 @@
 package practice.ocp;
 
+import java.util.Scanner;
+
 interface Speak {
     void greet();
 }
 
-class Kor implements Speak{
+class Kor implements Speak {
     @Override
     public void greet() {
         System.out.println("안녕하세요");
     }
 }
 
-class Eng implements Speak{
+class Eng implements Speak {
     @Override
     public void greet() {
         System.out.println("Hello");
@@ -25,7 +27,7 @@ class Chi implements Speak {
     }
 }
 
-class Speaker{
+class Speaker {
     Speak speak;
 
     public Speaker(final Speak speak) {
@@ -39,11 +41,27 @@ class Speaker{
 
 public class OCPExampleAndFactory {
     public static void main(String[] args) {
-        Kor kor = new Kor();
-        Eng eng = new Eng();
-        Chi chi = new Chi();
-        Speaker speaker = new Speaker(chi);
+        while (true) {
+            Speaker speaker = new Speaker(getSpeak());
+            speaker.sayHello();
+        }
+    }
 
-        speaker.sayHello();
+    private static Speak getSpeak() {
+        Scanner scanner = new Scanner(System.in);
+        String next = scanner.next();
+
+        while (true) {
+            switch (next) {
+                case "k":
+                    return new Kor();
+                case "e":
+                    return new Eng();
+                case "c":
+                    return new Chi();
+                default:
+                    System.out.println("k, e, c 중에 하나만 입력");
+            }
+        }
     }
 }

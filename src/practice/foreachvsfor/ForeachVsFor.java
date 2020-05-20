@@ -1,38 +1,35 @@
 package practice.foreachvsfor;
 
+import practice.PerformanceTester;
+
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.List;
 
 public class ForeachVsFor {
     public static void main(String[] args) {
-//        ArrayList<Integer> list = new ArrayList<>();
-        Integer[] integers = new Integer[100000];
-
-        for (int i = 0; i < 100000; i++) {
-//            list.add(i);
-            integers[i] = i;
+        List<Integer> list = new ArrayList<>();
+//        List<Integer> list = new LinkedList<>();
+        for (int i = 0; i < 100; i++) {
+            list.add(i);
         }
 
-        for (int loop = 0; loop < 10; loop++) {
-            long start = System.nanoTime();
-//            for (Integer integer : list) {
-//                integer++;
-//            }
-//        for (int i = 0; i < list.size(); i++) {
-//            Integer integer = list.get(i);
-//            integer++;
-//        }
+        final int TestCaseNum = 100000;
+        final int IteratorNumber = 100;
 
-//            for (Integer integer : integers) {
-//                integer++;
-//            }
-            for (int i = 0; i < integers.length; i++) {
-                integers[i]++;
+        final double foreach = PerformanceTester.calcPerformance(() -> {
+            for (Integer integer : list) {
+                integer++;
             }
-            long end = System.nanoTime();
+        }, TestCaseNum, IteratorNumber);
 
-            System.out.println(end - start);
-        }
+        final double traditionalFor = PerformanceTester.calcPerformance(() -> {
+            for (int i = 0, size = list.size(); i < size; i++) {
+                Integer integer = list.get(i);
+                integer++;
+            }
+        }, TestCaseNum, IteratorNumber);
 
+        System.out.println("for-each = " + foreach);
+        System.out.println("traditionalFor = " + traditionalFor);
     }
 }

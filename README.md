@@ -1,5 +1,18 @@
 # Java-Practice
 
+## (20.06.18) Java stream Peek연산
+- forEach와 비슷하지만 forEach는 그 자체로 종단연산이고, Peek은 중간연산이다.
+```
+Arrays.stream(parse(split(s)))
+        .peek(i -> {
+            if (i < 0) {
+                throw new RuntimeException();
+            }
+        })
+        .reduce(0, Integer::sum);
+```
+예제코드 : onion-calculator 
+
 ## (20.04.18) 제네릭 메서드가 와일드카드와 다른점
 ### 제네릭 메서드의 장점
 - 제네릭 메서드는 (메서드 내부에서) 컨테이너에 매개변수 타입을 'add'할 수 있다.

@@ -9,9 +9,14 @@ public class WildCardTest {
 
         final List<? extends Number> numbers = wildCardTest(list1, list2);
         final List<Integer> integers = genericMethodTest(list1, list2);
+
+        List<Double> list3 = new ArrayList<>();
+        List<Double> list4 = new ArrayList<>();
+        final List<? extends Number> numbers2 = wildCardTest(list3, list4);
+        final List<Double> doubles = genericMethodTest(list3, list4);
     }
 
-    private static List<? extends Number> wildCardTest(List<? extends Number> list, List<? extends Integer> list2) {
+    private static List<? extends Number> wildCardTest(List<? extends Number> list, List<? extends Object> list2) {
 //        list.add(10);
         list.add(null);
 

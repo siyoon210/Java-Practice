@@ -14,14 +14,17 @@ public class WildCardTest {
 
 //        Object object = new Object();
 //        list.add(object);
+
+//        list.add(list.get(0));
     }
 
     private <T extends Number> void genericMethodTest(List<T> list, List<T> list2) {
-        //        list.add(10);
+//        list.add(10);
         list.add(null);
 
 //        Object object = new Object();
 //        list.add(object);
 
+        list.add(list.get(0));
     }
 }

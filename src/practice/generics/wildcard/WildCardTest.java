@@ -1,16 +1,17 @@
 package practice.generics.wildcard;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class WildCardTest {
     public static void main(String[] args) {
+        List<Integer> list1 = new ArrayList<>();
+        List<Integer> list2 = new ArrayList<>();
 
+        final List<? extends Number> numbers = wildCardTest(list1, list2);
+        final List<Integer> integers = genericMethodTest(list1, list2);
     }
 
-    private void wildCardTest(List<? extends Number> list, List<? extends Set<Number>> list2) {
+    private static List<? extends Number> wildCardTest(List<? extends Number> list, List<? extends Integer> list2) {
 //        list.add(10);
         list.add(null);
 
@@ -18,9 +19,10 @@ public class WildCardTest {
 //        list.add(object);
 
 //        list.add(list.get(0));
+        return list;
     }
 
-    private <T extends Number> void genericMethodTest(List<T> list, List<T> list2) {
+    private static <T extends Number> List<T> genericMethodTest(List<T> list, List<T> list2) {
 //        list.add(10);
         list.add(null);
 
@@ -28,5 +30,7 @@ public class WildCardTest {
 //        list.add(object);
 
         list.add(list.get(0));
+
+        return list;
     }
 }

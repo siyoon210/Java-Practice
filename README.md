@@ -20,6 +20,8 @@ Arrays.stream(parse(split(s)))
 
 ### 와일드카드의 장점
 - 메서드 시그니처가 제네릭 메서드에 비해서 간단하다. (만약 같은 타입을 2번이상 여러번 쓴다면 반대로 제네릭 메서드가 깔끔하다.)
+- 같은 ? 라도 다른 타입을 받을 수 있다. 
+    `List<? extends Number> list, List<? extends Set<Number>> list2`
 
 ## (20.04.11) 제네릭 메서드 vs 와일드카드
 - 기능적으로는 같다.

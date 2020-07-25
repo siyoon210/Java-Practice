@@ -1,5 +1,13 @@
 # Java-Practice
 
+## (20.07.25)Arrays.fill()
+- 배열의 같은 값을 채우는 메서드 (알고리즘 문제풀때 좋아!)
+```
+Integer[] integers = new Integer[10];
+Arrays.fill(integers, 777);
+```
+예제코드 : practice.arraysfill
+
 ## (20.06.18) Java stream Peek연산
 - forEach와 비슷하지만 forEach는 그 자체로 종단연산이고, Peek은 중간연산이다.
 ```

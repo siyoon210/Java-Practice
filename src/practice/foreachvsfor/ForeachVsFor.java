@@ -7,10 +7,12 @@ import java.util.List;
 
 public class ForeachVsFor {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
+//        List<Integer> list = new ArrayList<>();
 //        List<Integer> list = new LinkedList<>();
+        Integer[] list = new Integer[100];
         for (int i = 0; i < 100; i++) {
-            list.add(i);
+//            list.add(i);
+            list[i] = i;
         }
 
         final int TestCaseNum = 100000;
@@ -23,8 +25,8 @@ public class ForeachVsFor {
         }, TestCaseNum, IteratorNumber);
 
         final double traditionalFor = PerformanceTester.calcPerformance(() -> {
-            for (int i = 0, size = list.size(); i < size; i++) {
-                Integer integer = list.get(i);
+            for (int i = 0, size = list.length; i < size; i++) {
+                Integer integer = list[i];
                 integer++;
             }
         }, TestCaseNum, IteratorNumber);

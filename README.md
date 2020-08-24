@@ -1,5 +1,13 @@
 # Java-Practice
 
+## (20.08.25) What are the advantages of streams over loops?
+### 장점
+- 좀더 선언적인 프로그래밍이 가능하여 코드가 '무엇'을 하는지 집중 할 수 있다.
+### 단점
+- 디버깅이 힘들다
+
+- https://stackoverflow.com/questions/44180101/in-java-what-are-the-advantages-of-streams-over-loops
+
 ## (20.07.25)Arrays.fill()
 - 배열의 같은 값을 채우는 메서드 (알고리즘 문제풀때 좋아!)
 ```

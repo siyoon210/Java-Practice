@@ -1,5 +1,8 @@
 # Java-Practice
 
+## (20.09.10) TreeSet<T>, TreeMap<T>을 사용할려면 반드시 T타입의 Comparable<T>을 구현하라
+- Tree 시리즈의 동등성검사는 Compare()로 진행된다. 즉 제대로 구현되지 않으면 입력된 데이터들을 모두 같은 인스턴스로 취급할 것이다. ID와 같은 값을 반드시 Compare메서드에 넣어서 구분시켜주자.
+
 ## (20.08.25) What are the advantages of streams over loops?
 ### 장점
 - 좀더 선언적인 프로그래밍이 가능하여 코드가 '무엇'을 하는지 집중 할 수 있다.

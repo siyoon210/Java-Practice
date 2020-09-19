@@ -1,5 +1,27 @@
 # Java-Practice
 
+## (20.09.19) 클래스로더
+- **자바는 동적으로 클래스를 읽어온다. 즉, 런타임에 모든 코드가 JVM에 링크된다. 모든 클래스는 그 클래스가 참조되는 순간에 동적으로 JVM에 링크되며, 메모리에 로딩된다.**
+- 이러한 행위를 해주는 것이 클래스 로더다
+- 클래스로더는 최상위 bootstrap 클래스로더부터 Extension, App(System) 클래스로더로 내려온다.
+    ![classloader](https://t1.daumcdn.net/cfile/tistory/267FDB50586B217223)
+    - (이는 상속을 말하는게 아닌것같다. 개념적인 부모-자식인 것 같다. 스프링에도 이런 개념이있었는데.. )
+    - 부트스트랩 클래스로더는 $JAVA_HOME/jre/lib 파일을 읽어온다. 
+    - 익스텐션 클래스로더는 $JAVA_HOME/jre/lib/ext 파일을 읽어온다.
+    - 이후 자식부터는 선언된 클래스패스에서 읽어온다.
+    - 부트스트랩 클래스로더는 자바코드로 확인할수 없다. getClassLoader()를 하면 null로 반환되는데 이는 c로 구현되어 있기 때문이다.
+        - JVM이 부트스트랩(bootstrap) 클래스로더를 생성하고, 그 다음에 가장 첫번째 클래스인 Object를 시스템에 읽어온다.
+        - 그러므로 이후에 익스텐션 클래스로더, 앱 클래스로더는 자바코드로 확인이 가능하다.
+    - 자식클래스로더가 부모클래스로더에게 클래스로딩을 일임하는 구조다. 최상위 부모클래스(부트스트랩) 부터 읽을수 없으면 다시 자식에게 알린다.
+        - 최하단 자식클래스로더가 읽을 수 없다면 ClassNotFoundException을 발생시킨다.
+    - 클래스들을 캐시처리를 해두어서 한번만 읽도록 한다. (Q 이미 스태틱(메소드)영역에 클래스가 존재하지 않나..?)
+- 로드타임 동적 로딩(load-time dynamic loading)과 런타임 동적 로딩(run-time dynamic loading)
+    - 말그대로 '로드타임'에 가져오는 경우가 있고, 코드상에서 명시되어 '런타임'에 가져오는 경우가 있다. (자바캔 참고)
+
+- https://futurists.tistory.com/43
+- https://javacan.tistory.com/entry/1
+- https://stackoverflow.com/questions/1921238/getclass-getclassloader-is-null-why
+
 ## (20.09.17) JVM
 - .java 파일을 .class로 변환하는건 자바 컴파일러가 진행한다.
 - .class 파일을 구동되는 OS 특화된 언어로 변환하는건 JVM이 진행한다.

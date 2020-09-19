@@ -10,13 +10,14 @@ public class ClassLoaderTest {
         System.out.println(Integer.class.getClassLoader());
 
         // AppClassLoader represented
-        System.out.println(ClassLoaderTest.class.getClassLoader().getClass().getName());
+        final ClassLoader classLoader = ClassLoaderTest.class.getClassLoader();
+        System.out.println(classLoader.getClass().getName());
 
         // ExtensionClassLoader represented
-        System.out.println(ClassLoaderTest.class.getClassLoader().getParent().getClass().getName());
+        System.out.println(classLoader.getParent().getClass().getName());
 
         // BootstrapClassLoader represented null!
-        System.out.println(ClassLoaderTest.class.getClassLoader().getParent().getParent());
+        System.out.println(classLoader.getParent().getParent());
 
     }
 }

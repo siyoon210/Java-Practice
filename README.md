@@ -1,5 +1,20 @@
 # Java-Practice
 
+## (20.09.21) GC 기초
+- GC를 구조를 이해하기 위해서 전제처럼 알고 있어야 할 가설이 있다. (Weak Generation Hypothesis)
+    1. 대부분의 객체는 금방 접근 불가능한 (Unreachable) 상태가 된다.
+    2. 오래된 객체에서 젊은 객체로의 참조는 아주 적게 존재한다.
+- 그러므로, 만들어지지 얼마되지 않은 객체와 오래된 객체와의 관리적 분리가 필요한 것이다.
+    - 크게 Young영역과 Old영역으로 나뉘게 되는 이유도 위의 가설에 기반하여 생각하면 아주 자연스럽다.
+    - 영역이 나누어져 있으면 Young영역의 GC와 Old영역의 GC를 나누어서 할 수 있게 되며, 성능상에 이점도 얻을 수 있다.
+        - Young영역의 GC를 Minor GC, Old 영역의 GC를 Major Gc(혹은 Full GC)라고 한다.
+
+Q) 각 영역들을 옮겨 다니게 되면 객체의 참조값도 바꾸게 될까?
+    A) 그렇다. (https://stackoverflow.com/questions/35548337/does-object-reference-change-after-gc/35548535#35548535)
+ 
+- https://d2.naver.com/helloworld/1329
+- https://medium.com/datadriveninvestor/how-does-garbage-collection-work-in-java-da8f75ec6899
+
 ## (20.09.20) JVM 실행과정
 1. JVM이 실행되면 부트스트랩 클래스로더를 생성하고 Object 클래스를 불러온다.
 2. 익스텐션 클래스로더와 시스템(앱)클래스로더도 생성되고, 이제 필요한 클래스들은 참조되는 순간 동적으로 불러오게 된다.

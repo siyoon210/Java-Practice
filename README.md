@@ -1,5 +1,32 @@
 # Java-Practice
 
+## (20.09.22) GC가 Garbage를 찾는 방법
+### Reference Counting Algorithm
+1. 오브젝트가 참조되면 해당 오브젝트의 RC를 하나 증가시키고, 참조가 사라지면 RC를 하나 감소시킨다.
+2. RC카운트가 0이 되면 Garbage로 판단한다.
+- 이 알고리즘은 Stop-The-World(garbage를 찾는 과정) 없이 수행 할 수 있다. 참조가 0이 되는 순간을 바로 알 수 있으니까!
+- 하지만 JVM은 이방식을 사용하지 않는다 왜냐!
+    - 이 알고리즘은 객체 내부적으로 순환참조가 일어날때 RC가 0이 되지 않아 메모리 누수(leak)가 발생한다.
+    ```
+    class MyClass {
+        Object instance;
+    }
+  
+    public static void main(String[] args) {
+        MyClass A = new MyClass();
+        MyClass B = new MyClass();
+  
+        A.instance = B;
+        B.instance = C;
+  
+        A = null;
+        B = null;
+    }
+    ```
+    - A가 참조했던 객체와 B가 참조했던 객체는 더 이상 사용되지 않아 Garbage처럼 보이지만, 여전히 A.instance는 B를 참조하고 있고 B.instance는 A를 참조하고 있게 된다. 순환적으로 참조하여 어느 한곳에서 먼저 참조를 해제할 수 없는 상태가 된다.
+     
+- https://medium.com/datadriveninvestor/how-does-garbage-collection-work-in-java-da8f75ec6899
+
 ## (20.09.21) GC 기초
 - GC를 구조를 이해하기 위해서 전제처럼 알고 있어야 할 가설이 있다. (Weak Generation Hypothesis)
     1. 대부분의 객체는 금방 접근 불가능한 (Unreachable) 상태가 된다.
@@ -13,7 +40,6 @@ Q) 각 영역들을 옮겨 다니게 되면 객체의 참조값도 바꾸게 될
     A) 그렇다. (https://stackoverflow.com/questions/35548337/does-object-reference-change-after-gc/35548535#35548535)
  
 - https://d2.naver.com/helloworld/1329
-- https://medium.com/datadriveninvestor/how-does-garbage-collection-work-in-java-da8f75ec6899
 
 ## (20.09.20) JVM 실행과정
 1. JVM이 실행되면 부트스트랩 클래스로더를 생성하고 Object 클래스를 불러온다.

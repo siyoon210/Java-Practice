@@ -1,5 +1,13 @@
 # Java-Practice
 
+## (20.09.24) GC가 메모리를 관리하는 방법
+### Mark-Sweep Algorithm
+![Mark-Sweep Algorithm](https://miro.medium.com/max/1540/0*e1NY2bol0n3fQ-x-.png)
+- 가장 일반적인 메모리 회수 방법으로 사용하지 않을 메모리를 Mark해두고, Sweap하여 비우는 알고리즘이다.
+- 이 알고리즘은 메모리 조각화 문제가 있다. (memory fragmentation)
+    - 작은 사이즈의 메모리 공간을 비우더라도, 이후에 큰 사이즈의 메모리를 차지해야 하는 정보가 있다면 사용이 불가능하다.
+        - 하나의 정보는 하나의 블럭단위로 저장되어야 하기 때문이다. (We know that memory can be allocated only in contiguous form of blocks.) 
+
 ## (20.09.22) GC가 Garbage를 찾는 방법
 ### Reference Counting Algorithm
 1. 오브젝트가 참조되면 해당 오브젝트의 RC를 하나 증가시키고, 참조가 사라지면 RC를 하나 감소시킨다.
@@ -31,6 +39,13 @@
 - 'GC root'는 무엇인가?
     1. 스택영역 (JVM, 네이티브 둘다)에서 (지역변수가) 참조하고 있는 객체! (지역변수가 아니라 이 객체가 root다)
     2. 메소드 영역(스태틱 영역)에서 static 요소들이 참조하고 있는 객체! (이 요소들이 아니라 객체가 root다!) 
+    3. 메소드 영역(스태틱 영역)에서 상구가 참조하고 있는 객체!
+    ```
+        - Objects referenced in the virtual machine (VM) stack, that is the local variable table in the stack frame
+        - Objects referenced by class static attributes in the method area
+        - Objects referenced by constants in the method area
+        - Objects referenced by JNI (the Native method) in the native method stack
+    ```
 
 - https://medium.com/datadriveninvestor/how-does-garbage-collection-work-in-java-da8f75ec6899
 

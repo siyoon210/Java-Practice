@@ -24,7 +24,14 @@
     }
     ```
     - A가 참조했던 객체와 B가 참조했던 객체는 더 이상 사용되지 않아 Garbage처럼 보이지만, 여전히 A.instance는 B를 참조하고 있고 B.instance는 A를 참조하고 있게 된다. 순환적으로 참조하여 어느 한곳에서 먼저 참조를 해제할 수 없는 상태가 된다.
-     
+
+### Reachability Analysis Algorithm
+'GC root'로 부터 참조를 그래프 탐색하여 도달 가능한 Object들은 여전히 사용하는 객체로 판단하고, 아니라면 Garbage로 판단하는 알고리즘
+
+- 'GC root'는 무엇인가?
+    1. 스택영역 (JVM, 네이티브 둘다)에서 (지역변수가) 참조하고 있는 객체! (지역변수가 아니라 이 객체가 root다)
+    2. 메소드 영역(스태틱 영역)에서 static 요소들이 참조하고 있는 객체! (이 요소들이 아니라 객체가 root다!) 
+
 - https://medium.com/datadriveninvestor/how-does-garbage-collection-work-in-java-da8f75ec6899
 
 ## (20.09.21) GC 기초

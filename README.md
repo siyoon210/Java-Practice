@@ -7,6 +7,16 @@
 - 이 알고리즘은 메모리 조각화 문제가 있다. (memory fragmentation)
     - 작은 사이즈의 메모리 공간을 비우더라도, 이후에 큰 사이즈의 메모리를 차지해야 하는 정보가 있다면 사용이 불가능하다.
         - 하나의 정보는 하나의 블럭단위로 저장되어야 하기 때문이다. (We know that memory can be allocated only in contiguous form of blocks.) 
+        
+### Copying Algorithm
+![Copying Algorithm](https://medium.com/datadriveninvestor/how-does-garbage-collection-work-in-java-da8f75ec6899)
+- Copying Algorithm은 Mark-Sweep Algorithm의 단점인 메모리 조각화 문제를 해결 할 수 있다.
+- 메모리 영역을 2군데로 나누어두고, 한곳만을 사용하다가 이곳이 가득 차면, 사용하던 메모리 영역을 비우고 사용하지 않던 메모리 영역으로 객체들을 복사한다.
+    - 마치 Young영역의 Survicor1,2같네!
+    - 메모리 조각화 문제가 당연히 일어나지 않는다.
+- 다만 메모리 영역을 반밖에 사용하지 못한다는 단점이 있다.
+
+- https://medium.com/datadriveninvestor/how-does-garbage-collection-work-in-java-da8f75ec6899
 
 ## (20.09.22) GC가 Garbage를 찾는 방법
 ### Reference Counting Algorithm

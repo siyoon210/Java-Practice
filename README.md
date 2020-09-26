@@ -1,5 +1,19 @@
 # Java-Practice
 
+## (20.09.26) JVM GC가 메모리 영역을 여러군데로 나누는 이유!
+### Generational Collection Algorithm
+- 메모리 영역을 나누어서, 해당 영역마다 적절한 알고리즘을 적용할 수 있기 때문이다.
+- 크게 영(Young), 올드(Old)영역 2군데로 나뉘게 되는데, 
+    - 영영역은 많은 객체들이 금방 사라지기 때문에 GC를 자주 수행한다. 연산이 비교적 빠 Mark-Sweep과 Copying 알고리즘을 염두할 수 있다.
+    - 올드영역은 GC를 자주 수행하지 않지 않는다. 메모리를 효율적으로 사용하는 Mark-Compact-Sweep알고리즘을 생각해 볼 수 있겠다.
+- 그리고 이 모든 것은 Weak Generation Hypothesis 가설을 기반으로 생각한다. (대부분 객체는 바로 사라지고, 올드 객체가 새로운 객체를 참조하는 일이 매우 적다.)
+    - As shown in a professional research conducted by IBM, nearly 98% of the objects are short-lived.
+
+### Young 영역
+- 영영역은 다시 3군데로 나누어진다.
+    - Eden
+    - Survivor 1,2
+
 ## (20.09.24) GC가 메모리를 관리하는 방법
 ### Mark-Sweep Algorithm
 ![Mark-Sweep Algorithm](https://miro.medium.com/max/1540/0*e1NY2bol0n3fQ-x-.png)
@@ -7,20 +21,26 @@
 - 이 알고리즘은 메모리 조각화 문제가 있다. (memory fragmentation)
     - 작은 사이즈의 메모리 공간을 비우더라도, 이후에 큰 사이즈의 메모리를 차지해야 하는 정보가 있다면 사용이 불가능하다.
         - 하나의 정보는 하나의 블럭단위로 저장되어야 하기 때문이다. (We know that memory can be allocated only in contiguous form of blocks.) 
+- 장점 : 알고리즘 연산이 간단하다.
+- 단점 : 메모리 조각화문제가 발생한다.
         
 ### Copying Algorithm
-![Copying Algorithm](https://medium.com/datadriveninvestor/how-does-garbage-collection-work-in-java-da8f75ec6899)
+![Copying Algorithm](https://miro.medium.com/max/1540/0*AG2dn5KoBr5HP_2L.png)
 - Copying Algorithm은 Mark-Sweep Algorithm의 단점인 메모리 조각화 문제를 해결 할 수 있다.
 - 메모리 영역을 2군데로 나누어두고, 한곳만을 사용하다가 이곳이 가득 차면, 사용하던 메모리 영역을 비우고 사용하지 않던 메모리 영역으로 객체들을 복사한다.
     - 마치 Young영역의 Survicor1,2같네!
     - 메모리 조각화 문제가 당연히 일어나지 않는다.
 - 다만 메모리 영역을 반밖에 사용하지 못한다는 단점이 있다.
+- 장점 : 메모리 조각화 문제가 발생되지 않는다.
+- 단점 : 메모리를 2군데로 나누어서 활성화된 영역을 반밖에 사용하지 못한다.
 
 ### Mark-Compact Algorithm
 ![Mark-Compact Algorithm](https://miro.medium.com/max/1540/0*qIJFk4iNPBxe0Vsx.png)
 - Mark-Sweep과 유사하게 행동하지만, 바로 메모리를 비우지 않고, 사용되고 있는 객체들을 메모리 빈공간없이 압축(Compact)하는 과정을 추가한다.
 - Mark-Sweep처럼 메모리 조각화 문제를 발생시키지 않고, Copying Algorithm처럼 메모리를 반만 쓰는 문제는 없지만
 - 압축하는 과정이 있기 떄문에 시간 성능상 Copying Algorithm보다 불리하다. 
+- 장점 : 메모리 조각화 문제가 일어나지 않고, 메모리 영역 전체를 사용가능하다.
+- 단점 : 연산이 복잡하다. (내 예상으론 Mark-Compact-Sweep < Copying < Mark-Sweap 순으로 빠를것으로 예상한다.)  
 
 - https://medium.com/datadriveninvestor/how-does-garbage-collection-work-in-java-da8f75ec6899
 

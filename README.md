@@ -1,5 +1,14 @@
 # Java-Practice
 
+## (20.10.26) Collections -> 원시 배열
+```
+answerList.stream()
+            .mapToInt(Integer::intValue)
+            .toArray();
+```
+- 스트림을 활용하여서 mapToInt로 변환후에 toArray()를 호출하면, 원시타입 배열로 쉽게 변경가능 (알고리즘 풀이시에 용이)
+- Set을 쓰더라도 스트림을 뽑아내면 `sorted()`로 정렬일 가능하다!
+
 ## (20.09.26) JVM GC가 메모리 영역을 여러군데로 나누는 이유!
 ### Generational Collection Algorithm
 - 메모리 영역을 나누어서, 해당 영역마다 적절한 알고리즘을 적용할 수 있기 때문이다.

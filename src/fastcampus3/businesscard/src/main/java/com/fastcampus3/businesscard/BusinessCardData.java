@@ -9,5 +9,5 @@ import java.util.List;
 @ToString @EqualsAndHashCode
 public class BusinessCardData {
     private int maxNum;
-    private List<BusinessCard> businessCardList;
+    private List<com.fastcampus3.businesscard.BusinessCard> businessCardList;
 }

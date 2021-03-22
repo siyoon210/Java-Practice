@@ -88,3 +88,10 @@ String은 + 연산 이전에 문자열과 연산 이후의 연산 문자열이 �
 Q) StringBuilder, StringBuffer의 차이 (면접 단골질문이더라구요)
 Q) 자바 1.5버전 이상부터는 String 연산을 컴파일러가 알아서 최적화하여 굳이 StringBuilder를 안써도 된다고 하던데...? 진짜 그럴까요? 그럼 언제 StringBuilder를 사용해야할까요?
 ```
+
+### 메서드 이름은 동사
+```
+메서드 이름은 가능한 동사로 만들어 만들어주세요. 😄 
+
+[자바 코딩 컨벤션](https://myeonguni.tistory.com/1596)
+```

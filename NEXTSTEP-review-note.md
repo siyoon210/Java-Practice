@@ -95,3 +95,8 @@ Q) 자바 1.5버전 이상부터는 String 연산을 컴파일러가 알아서 �
 
 [자바 코딩 컨벤션](https://myeonguni.tistory.com/1596)
 ```
+
+### @ParameterizedTest와 @NullAndEmptySource
+```
+@ParameterizedTest 와 @NullAndEmptySource 를 사용하면 하나의 단언문으로 만들수 있겠네요. 🙂
+```

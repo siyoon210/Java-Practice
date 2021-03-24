@@ -1,6 +1,18 @@
 package practice.enumexercise;
 
 public class Enum {
+    private static Type getTypeObject(Fruit Type) {
+        switch (Type) {
+            case APPLE:
+                return new Apple();
+            case PEACH:
+                return new Peach();
+            case BANANA:
+                return new Banana();
+        }
+        return null;
+    }
+
     enum Fruit {APPLE, BANANA, PEACH}
     enum Company{APPLE, GOOGLE, SAMSUMG}
 
@@ -13,16 +25,6 @@ public class Enum {
 //        }
 
         Fruit Type = Fruit.APPLE;
-        switch (Type) {
-            case APPLE:
-                System.out.println("애플");
-                break;
-            case PEACH:
-                System.out.println("복숭아");
-                break;
-            case BANANA:
-                System.out.println("바나나");
-                break;
-        }
+        getTypeObject(Type).main();
     }
 }

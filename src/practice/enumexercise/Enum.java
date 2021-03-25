@@ -20,10 +20,6 @@ public class Enum {
         System.out.println(Fruit.APPLE);
         System.out.println(Company.APPLE);
 
-//        if (Fruit.APPLE != Company.APPLE) {
-//
-//        }
-
         Fruit Type = Fruit.APPLE;
         getTypeObject(Type).main();
     }

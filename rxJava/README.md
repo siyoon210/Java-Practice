@@ -16,3 +16,13 @@
 4. 모든 데이터의 통지가 완료되었다면 (onComplete), 에러가 발생하면 (onError)
 
 - 생산자의 데이터 생산속도가 너무 빠를 수 있으므로 소비자에서 처리가능할 데이터의 갯수를 요청하는 것이 핵심.
+
+## RXJava의 기본구조
+- 표준 API Reactive Streams를 구현한 구현체와 아닌 구현체로 나눠져 있다.
+- 기본적 구조는 생산자-소비자 구조임에는 같다.
+
+|구분 | 생산자 | 소비자|
+|---|---|---|
+|Reactive Streams 지원 | Flowable | Subscriber|
+|Reactive Streams 미지원 | Observable | Observer|
+- 표준 API를 사용하는것이 좋아보인다. 아직은 잘 모르지만 '배압'기능도 표준 API 구현체만 가능! 

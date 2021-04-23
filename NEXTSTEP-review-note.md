@@ -197,3 +197,36 @@ Random하게 값이 설정되어서 이런 부분을 테스트로 단언하기�
 자바8에서 인터페이스에 디펄트 메서드가 제공되면서 거의 차이점이 없어졌지만 추상클래스는 인터페이스가 제공할수 없는 다양한 접근제어자를 사용할 수 있고, 상속받은 클래스에게 기본적인 기능을 제공할 수 있습니다. 예를들어 템플렛 메서드 패턴과 같은 디자인 패턴은 추상클래스만이 제공할 수 있죠.
 인터페이스는 이런 기능을 제공할 수 없지만 다중구현이 가능하여서 여러 타입으로 다형성을 사용할 수 있다는 장점이 있죠. 🙂
 ```
+
+### 한 줄에 점을 하나만 찍는다.
+```
+마지막단계는 프로그래밍 요구사항이 정말 깐깐해요.
+모든 경우에 지킬순 없겠지만 이번 미션에서 최대한 연습해보는건 어떨까요? 🙂
+
+> 규칙 4: 한 줄에 점을 하나만 찍는다.
+
+객체지향 생활 체조 원칙 규칙4를 지키기 위해서 저는 다음과 같은 방법들을 사용합니다.
+
+1. 지역변수를 선언한다.
+2. [디미터 법칙](https://woowacourse.github.io/javable/post/2020-06-02-law-of-demeter/)을 준수하고 기능을 제공한다.
+특히 일급컬렉션이나 래퍼클래스인 경우 본래의 value를 노출하지 않고 최대한 기능을 제공하도록 고민해보세요. 예를들어 frames.getFrames()을 제공하지 않고 Frames 일급컬렉션을 그대로 제공하고 사용되는 기능을 만드는건 어떤가요? 🙂
+```
+
+### 일급컬렉션 Iterable 예제
+
+```
+일급컬렉션을 선언했으니 getter로 value를 노출하지 않고 가능한 일급컬렉션만을 사용해보도록 연습해보실 권합니다. 🙂
+
+DeleteHistoryRepository.saveAll() 메서드에서 인자로 받는건 Iterable 인터페이스를 구현한 객체입니다. DeleteHistories에서 Iterable 인터페이스를 구현해보세요!
+
+public class DeleteHistories implements Iterable<DeleteHistory> {
+    private final List<DeleteHistory> value;
+
+    // ...
+
+    @Override
+    public Iterator<DeleteHistory> iterator() {
+        return value.iterator();
+    }
+}
+```

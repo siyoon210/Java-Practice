@@ -297,3 +297,19 @@ if(user.isUnemployed()) {
 ```
 패키지명의 카멜케이스는 컨벤션에 어긋나요. bowling_refactor 이나 bowlingrefactor로 써주세요.
 ```
+
+### 일급컬렉션 Iterable
+```
+일급컬렉션이 Iterable 인터페이스를 구현해보세요. Repository에서도 자연스럽게 동작할꺼에요!)
+
+public class DeleteHistories implements Iterable<DeleteHistory> {
+    private final List<DeleteHistory> value;
+
+    // ...
+
+    @Override
+    public Iterator<DeleteHistory> iterator() {
+        return value.iterator();
+    }
+}
+```

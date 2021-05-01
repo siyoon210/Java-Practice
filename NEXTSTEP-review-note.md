@@ -297,3 +297,8 @@ if(user.isUnemployed()) {
 ```
 패키지명의 카멜케이스는 컨벤션에 어긋나요. bowling_refactor 이나 bowlingrefactor로 써주세요.
 ```
+
+### 줄바꿈
+```
+System.lineSeparator()를 사용하면 OS마다 다른 줄바꿈 코드를 반영해줍니다.
+```

@@ -13,7 +13,15 @@ public class P313Pattern3 {
 
         Flowable<String> flowable = Flowable.just("A", "B", "C")
                 .doOnSubscribe(data -> System.out.println("구독 시작 : " + System.currentTimeMillis()))
-                .delay(Flowable.timer(1000L, TimeUnit.MILLISECONDS), delayData -> Flowable.timer(2000L, TimeUnit.MILLISECONDS))
+                .delay(Flowable.timer(1000L, TimeUnit.MILLISECONDS), delayData -> {
+                    if (delayData.equals("A")) {
+                        return Flowable.timer(1000L, TimeUnit.MILLISECONDS);
+                    } else if (delayData.equals("B")) {
+                        return Flowable.timer(2000L, TimeUnit.MILLISECONDS);
+                    } else {
+                        return Flowable.timer(3000L, TimeUnit.MILLISECONDS);
+                    }
+                })
                 .doOnNext(data -> System.out.println("통지 시각 : " + System.currentTimeMillis() + ", data :" + data));
 
         flowable.subscribe(new DebugSubscriber<>());

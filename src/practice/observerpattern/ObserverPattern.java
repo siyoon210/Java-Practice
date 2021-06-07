@@ -47,6 +47,7 @@ interface Subject<T> {
 }
 
 class MyStringSubject implements Subject<String> {
+    //Subject가 notify해야할 옵저버들을 가지고 있는 것이 핵심!
     private final Set<Observer<String>> observers = new CopyOnWriteArraySet<>();
 
     @Override

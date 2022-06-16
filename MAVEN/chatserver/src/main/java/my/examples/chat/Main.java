@@ -5,8 +5,8 @@ import java.net.UnknownHostException;
 
 public class Main {
     public static void main(String[] args) throws UnknownHostException {
-        System.out.println(InetAddress.getLocalHost().getHostAddress());
-        ChatServer chatServer = new ChatServer(11000);
+        System.out.println(InetAddress.getLocalHost().getHostAddress() + ":" + args[0]);
+        ChatServer chatServer = new ChatServer(Integer.parseInt(args[0]));
         chatServer.start();
     }
 }

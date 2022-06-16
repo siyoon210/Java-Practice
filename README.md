@@ -1,5 +1,15 @@
 # Java-Practice
 
+## (21.10.26) 모든 의존 방향은 도메인을 향해야 한다.
+- 의존한다는 것은 의존 하는 것에 영향을 받겠다는 소리다. 도메인이 외부 API, UI, Persistence 시스템에 변화에 반응해서는 안된다. 고로, 모든 의존 방향은 도메인을 향해야 한다.
+- 이전에는 도메인이라 함은 == Entity라고 생각했었는데, 도메인은 엔티티가 아니다. 핵심이 되는 Use case의 로직이다.
+
+## (21.10.25) ThreadPool 사이즈에 대한 고찰
+- 고정된 쓰레드풀 사이즈를 가져야 한다면, CPU 연산만 존재하는 경우 CPU 갯수 + 1이 가장 이상적이고, API요청이나 DB요청등으로 기다리는 시간이 많다면 쓰레드의 갯수가 늘어나야한다.
+- Core한 쓰레드가 모두 사용되면 큐사이즈에 먼저 Task를 담는다. 만약 큐도 다 차게 되면 그때 풀사이즈를 늘린다. (즉 큐사이즈를 설정하지 않고 max 사이즈를 설정하는 것은 크게 의미가 없다.)
+- newCachedThreadPool은 큐(=SynchronosQueue)에 버퍼가 없다. 작업을 받았을때 처리할 쓰레드가 없다면 쓰레드를 만든다.
+- https://engineering.zalando.com/posts/2019/04/how-to-set-an-ideal-thread-pool-size.html
+
 ## (20.10.26) Collections -> 원시 배열
 ```
 answerList.stream()
